@@ -9,7 +9,6 @@ import android.view.MotionEvent;
 
 import java.lang.reflect.Method;
 
-import io.github.libxposed.api.XposedInterface;
 import io.github.libxposed.api.XposedModule;
 import io.github.libxposed.api.XposedModuleInterface.PackageLoadedParam;
 
@@ -23,18 +22,20 @@ public class AutoClickEntry extends XposedModule {
 
     @Override
     public void onPackageLoaded(PackageLoadedParam param) {
-        XposedInterface xposed = getXposedInterface();
-        xposed.hook(
-            Application.class,
-            "attach",
-            new Class[]{Context.class},
-            (chain) -> {
+        try {
+            // Ambil method attach dari class Application
+            Method attachMethod = Application.class.getDeclaredMethod("attach", Context.class);
+            
+            // Hook pakai getXposed() dan Executable (Method)
+            getXposed().hook(attachMethod).intercept(chain -> {
                 Object result = chain.proceed();
                 Context ctx = (Context) chain.getArg(0);
                 startAutoClick(ctx);
                 return result;
-            }
-        );
+            });
+        } catch (Throwable t) {
+            // Abaikan jika gagal mengambil method
+        }
     }
 
     private void startAutoClick(Context context) {
