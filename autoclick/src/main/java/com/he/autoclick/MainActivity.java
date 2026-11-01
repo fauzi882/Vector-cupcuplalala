@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        prefs = getSharedPreferences("settings", MODE_WORLD_READABLE);
+        prefs = getSharedPreferences("settings", MODE_PRIVATE);
 
         Switch swMaster = findViewById(R.id.swMaster);
         Switch swAutoClick = findViewById(R.id.swAutoClick);
@@ -25,7 +25,6 @@ public class MainActivity extends Activity {
         EditText etBlokir = findViewById(R.id.etBlokir);
         Button btnSimpan = findViewById(R.id.btnSimpan);
 
-        // Load data sebelumnya
         swMaster.setChecked(prefs.getBoolean("master", false));
         swAutoClick.setChecked(prefs.getBoolean("autoclick", true));
         etJarak.setText(prefs.getString("jarak", "3"));
@@ -40,7 +39,7 @@ public class MainActivity extends Activity {
             editor.apply();
 
             Toast.makeText(this, "Pengaturan Disimpan!", Toast.LENGTH_SHORT).show();
-            finish(); // Tutup aplikasi setelah disimpan
+            finish();
         });
     }
 }
