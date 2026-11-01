@@ -26,8 +26,8 @@ public class AutoClickEntry extends XposedModule {
             // Ambil method attach dari class Application
             Method attachMethod = Application.class.getDeclaredMethod("attach", Context.class);
             
-            // Hook pakai getXposed() dan Executable (Method)
-            getXposed().hook(attachMethod).intercept(chain -> {
+            // Panggil hook secara langsung karena kita sudah extends XposedModule
+            hook(attachMethod).intercept(chain -> {
                 Object result = chain.proceed();
                 Context ctx = (Context) chain.getArg(0);
                 startAutoClick(ctx);
