@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E2C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="inDriver Auto-Clicker &amp; Filter"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <Switch
+            android:id="@+id/swMaster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aktifkan Modul (Master)"
+            android:textColor="#FFFFFF" />
+
+        <Switch
+            android:id="@+id/swAutoClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auto-Click Kertas Order"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maksimal Jarak Jemput (km)"
+            android:textColor="#A8D08D"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etJarak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#44445A" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blokir Alamat (Pisahkan koma)"
+            android:textColor="#A8D08D"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etBlokir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cth: Jakarta, Bandung"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#777777"
+            android:backgroundTint="#44445A" />
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="SIMPAN &amp; TERAPKAN"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:backgroundTint="#00FF00"
+            android:layout_marginTop="32dp" />
+
+    </LinearLayout>
+</ScrollView>
