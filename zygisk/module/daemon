@@ -31,10 +31,9 @@ fi
 # rather than a tmpfs: a bind mount reuses the superblock of /data, so it claims none of the
 # kernel-global anonymous device minors, whose gaps are visible from any process on the device.
 # Note that this script runs inside an isolated mount namespace (via unshare).
+# resource-cache mount skipped for KernelSU compatibility
 emptyDir="$dir/.resource-cache"
-rm -rf "$emptyDir"
-mkdir -p "$emptyDir"
-mount -o bind "$emptyDir" /data/resource-cache 2>/dev/null || true
+mkdir -p "$emptyDir" 2>/dev/null || true 2>/dev/null || true
 
 # Wait for Zygote socket using a polling loop
 if [ ! -S "/dev/socket/zygote" ]; then
