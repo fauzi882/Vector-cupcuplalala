@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="nav_home">Home</string>
-    <string name="nav_modules">Modules</string>
+    <string name="nav_modules">Extensions</string>
     <string name="nav_logs">Logs</string>
     <string name="panels_ball_close">Close navigation</string>
     <string name="panels_ball_open">Open navigation</string>
@@ -12,5 +12,5 @@
     <string name="panels_show">Show %1$s</string>
     <string name="settings_rearrange_panels">Rearrange panels</string>
     <string name="nav_manage">Manage</string>
-    <string name="settings_rearrange_panels_summary">Change their order, or hide the ones you never open.</string>
+    <string name="settings_rearrange_panels_summary">Change their order</string>
 </resources>
