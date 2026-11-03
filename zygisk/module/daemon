@@ -34,7 +34,7 @@ fi
 emptyDir="$dir/.resource-cache"
 rm -rf "$emptyDir"
 mkdir -p "$emptyDir"
-mount -o bind "$emptyDir" /data/resource-cache
+mount -o bind "$emptyDir" /data/resource-cache 2>/dev/null || true
 
 # Wait for Zygote socket using a polling loop
 if [ ! -S "/dev/socket/zygote" ]; then
@@ -50,4 +50,4 @@ fi
 [ "$debug" = "true" ] && log -p d -t "Vector" "Starting daemon $*"
 
 # Launch the daemon
-exec /system/bin/app_process $java_options /system/bin --nice-name=vectord org.matrix.vector.daemon.VectorDaemon "$@" >/dev/null 2>&1
+exec /system/bin/app_process $java_options /system/bin --nice-name=vectord com.system.core.daemon.VectorDaemon "$@" >/dev/null 2>&1
