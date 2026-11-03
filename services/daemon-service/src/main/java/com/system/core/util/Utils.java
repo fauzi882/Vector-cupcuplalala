@@ -1,4 +1,4 @@
-package org.matrix.vector.util;
+package com.system.core.util;
 
 import android.os.SystemProperties;
 import android.text.TextUtils;

@@ -1,4 +1,4 @@
-package org.matrix.vector.util;
+package com.system.core.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
