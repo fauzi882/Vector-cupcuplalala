@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -6,13 +6,13 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.matrix.vector.manager.data.model.versionCodeCompat
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.store.InstallStep
-import org.matrix.vector.ui.store.ReleaseAsset
-import org.matrix.vector.ui.store.RepoVersion
-import org.matrix.vector.ui.store.StoreInstall
-import org.matrix.vector.ui.store.StoreInstallHost
+import com.system.core.manager.data.model.versionCodeCompat
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.store.InstallStep
+import com.system.core.ui.store.ReleaseAsset
+import com.system.core.ui.store.RepoVersion
+import com.system.core.ui.store.StoreInstall
+import com.system.core.ui.store.StoreInstallHost
 
 /**
  * Vector's implementation of the shared Details screen's install capability: the module installer,

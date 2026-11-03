@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.locale
+package com.system.core.ui.locale
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
@@ -49,8 +49,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import java.util.Locale
-import org.matrix.vector.ui.LocalDialogLocalizer
-import org.matrix.vector.ui.R
+import com.system.core.ui.LocalDialogLocalizer
+import com.system.core.ui.R
 
 /**
  * The language, in the languages themselves — every row written in its own script, so a reader

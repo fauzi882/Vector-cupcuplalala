@@ -1,25 +1,25 @@
-package org.matrix.vector.manager.ui.screens.update
+package com.system.core.manager.ui.screens.update
 
-import org.matrix.vector.ui.R as UiR
-import org.matrix.vector.manager.data.repository.FrameworkUpdateState
-import org.matrix.vector.manager.data.repository.divergesFrom
+import com.system.core.ui.R as UiR
+import com.system.core.manager.data.repository.FrameworkUpdateState
+import com.system.core.manager.data.repository.divergesFrom
 import androidx.compose.foundation.clickable
-import org.matrix.vector.ui.locale.currentLocale
-import org.matrix.vector.manager.data.repository.ReleaseDirection
-import org.matrix.vector.manager.data.github.FrameworkRelease
-import org.matrix.vector.manager.data.github.GitHubRepository
+import com.system.core.ui.locale.currentLocale
+import com.system.core.manager.data.repository.ReleaseDirection
+import com.system.core.manager.data.github.FrameworkRelease
+import com.system.core.manager.data.github.GitHubRepository
 import java.util.Date
 import java.text.DateFormat
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
-import org.matrix.vector.manager.data.github.ZipVariant
-import org.matrix.vector.manager.data.github.CanaryArtifact
-import org.matrix.vector.ui.update.VariantPicker
-import org.matrix.vector.ui.update.VariantChoice
-import org.matrix.vector.ui.update.VersionHistoryItem
-import org.matrix.vector.ui.update.VersionHistorySheet
-import org.matrix.vector.ui.update.VersionStatus
-import org.matrix.vector.ui.update.formatSize
+import com.system.core.manager.data.github.ZipVariant
+import com.system.core.manager.data.github.CanaryArtifact
+import com.system.core.ui.update.VariantPicker
+import com.system.core.ui.update.VariantChoice
+import com.system.core.ui.update.VersionHistoryItem
+import com.system.core.ui.update.VersionHistorySheet
+import com.system.core.ui.update.VersionStatus
+import com.system.core.ui.update.formatSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
@@ -69,15 +69,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
-import org.matrix.vector.ipc.IFrameworkInstallReceiver
-import org.matrix.vector.manager.R
-import org.matrix.vector.manager.data.repository.FlashStep
-import org.matrix.vector.ui.store.StoreHtmlPane
-import org.matrix.vector.ui.store.releaseMarkdownToHtml
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.ui.screens.web.fetchStoreSubresource
-import org.matrix.vector.manager.ui.screens.web.forWebView
-import org.matrix.vector.ui.theme.LogLine
+import com.system.core.ipc.IFrameworkInstallReceiver
+import com.system.core.manager.R
+import com.system.core.manager.data.repository.FlashStep
+import com.system.core.ui.store.StoreHtmlPane
+import com.system.core.ui.store.releaseMarkdownToHtml
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.ui.screens.web.fetchStoreSubresource
+import com.system.core.manager.ui.screens.web.forWebView
+import com.system.core.ui.theme.LogLine
 
 /**
  * What is in the update, and what happened when it was installed.

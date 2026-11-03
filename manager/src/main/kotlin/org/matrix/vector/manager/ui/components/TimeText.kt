@@ -1,12 +1,12 @@
-package org.matrix.vector.manager.ui.components
+package com.system.core.manager.ui.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import java.util.Locale
-import org.matrix.vector.ui.locale.currentLocale
+import com.system.core.ui.locale.currentLocale
 
-// compactCount for the project footer now lives in the shared lib as org.matrix.vector.ui.compactCount
+// compactCount for the project footer now lives in the shared lib as com.system.core.ui.compactCount
 // (used by the shared RepoStatsRow); it was lifted out of here so both apps' Home footers share it.
 
 /**

@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -6,10 +6,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.logE
+import com.system.core.manager.logW
 
 /**
  * The single source of truth for which modules are enabled.

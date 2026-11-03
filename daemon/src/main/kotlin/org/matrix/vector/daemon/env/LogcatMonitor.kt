@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.env
+package com.system.core.daemon.env
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -14,8 +14,8 @@ import java.nio.file.Files
 import java.nio.file.LinkOption
 import java.nio.file.Paths
 import kotlinx.coroutines.launch
-import org.matrix.vector.daemon.VectorDaemon
-import org.matrix.vector.daemon.data.FileSystem
+import com.system.core.daemon.SystemCoreDaemon
+import com.system.core.daemon.data.FileSystem
 
 private const val TAG = "VectorLogcat"
 private const val FD_MODE =
@@ -71,7 +71,7 @@ object LogcatMonitor {
   }
 
   private fun dumpPropsAndDmesg() {
-    VectorDaemon.scope.launch {
+    SystemCoreDaemon.scope.launch {
       // Filter privacy props by temporarily assuming an untrusted context
       runCatching {
             SELinux.setFSCreateContext("u:object_r:app_data_file:s0")
@@ -93,7 +93,7 @@ object LogcatMonitor {
   fun start() {
     if (isRunning) return
     isRunning = true
-    VectorDaemon.scope.launch {
+    SystemCoreDaemon.scope.launch {
       runCatching {
             Log.i(TAG, "Logcat daemon starting")
             runLogcat() // Blocks until the native logcat process dies

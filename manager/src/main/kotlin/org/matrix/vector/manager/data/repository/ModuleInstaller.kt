@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import android.content.Context
 import android.content.pm.PackageInstaller
@@ -13,11 +13,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.matrix.vector.ui.store.InstallStep
-import org.matrix.vector.ui.store.ReleaseAsset
-import org.matrix.vector.manager.ipc.commitForResult
-import org.matrix.vector.manager.ipc.requestReplaceExisting
-import org.matrix.vector.manager.logW
+import com.system.core.ui.store.InstallStep
+import com.system.core.ui.store.ReleaseAsset
+import com.system.core.manager.ipc.commitForResult
+import com.system.core.manager.ipc.requestReplaceExisting
+import com.system.core.manager.logW
 
 /**
  * Downloads a release asset straight into a `PackageInstaller` session.

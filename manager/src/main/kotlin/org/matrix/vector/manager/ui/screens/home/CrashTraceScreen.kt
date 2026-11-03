@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.home
+package com.system.core.manager.ui.screens.home
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -24,17 +24,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
-import org.matrix.vector.manager.R
-import org.matrix.vector.ui.R as UiR
-import org.matrix.vector.manager.data.log.CrashRecorder
-import org.matrix.vector.manager.data.log.CrashReport
-import org.matrix.vector.ui.SnackbarTone
-import org.matrix.vector.ui.logs.StackTrace
-import org.matrix.vector.ui.logs.stackTraceItems
-import org.matrix.vector.ui.SharedSnackbarHost
-import org.matrix.vector.manager.BuildConfig
-import org.matrix.vector.ui.copyToClipboard
-import org.matrix.vector.ui.show
+import com.system.core.manager.R
+import com.system.core.ui.R as UiR
+import com.system.core.manager.data.log.CrashRecorder
+import com.system.core.manager.data.log.CrashReport
+import com.system.core.ui.SnackbarTone
+import com.system.core.ui.logs.StackTrace
+import com.system.core.ui.logs.stackTraceItems
+import com.system.core.ui.SharedSnackbarHost
+import com.system.core.manager.BuildConfig
+import com.system.core.ui.copyToClipboard
+import com.system.core.ui.show
 
 /**
  * The newest crash, read as a list rather than as a wall of text.

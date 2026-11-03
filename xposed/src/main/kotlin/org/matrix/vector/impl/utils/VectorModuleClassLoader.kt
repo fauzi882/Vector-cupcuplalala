@@ -1,4 +1,4 @@
-package org.matrix.vector.impl.utils
+package com.system.core.impl.utils
 
 import android.os.Build
 import android.os.SharedMemory
@@ -17,7 +17,7 @@ import java.util.Enumeration
 import java.util.jar.JarFile
 import java.util.stream.Collectors
 import java.util.zip.ZipEntry
-import org.matrix.vector.nativebridge.HookBridge
+import com.system.core.nativebridge.HookBridge
 
 /**
  * Custom ClassLoader for module execution. Utilizes in-memory DEX loading to prevent the need to

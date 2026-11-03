@@ -1,13 +1,13 @@
-package org.matrix.vector.impl.core
+package com.system.core.impl.core
 
 import android.os.Binder
 import android.os.Bundle
 import android.os.Process
 import java.util.concurrent.Executors
-import org.matrix.vector.ipc.LoadedModule
-import org.matrix.vector.ipc.IHotReloadOutcomeReceiver
-import org.matrix.vector.ipc.IProcessChannel
-import org.matrix.vector.util.Log
+import com.system.core.ipc.LoadedModule
+import com.system.core.ipc.IHotReloadOutcomeReceiver
+import com.system.core.ipc.IProcessChannel
+import com.system.core.util.Log
 
 private const val TAG = "VectorProcessChannel"
 

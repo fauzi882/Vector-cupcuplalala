@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.canary
+package com.system.core.manager.ui.screens.canary
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -51,15 +51,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import org.matrix.vector.manager.R
-import org.matrix.vector.manager.data.github.GitHubRepository
-import org.matrix.vector.manager.data.github.TimelineCommit
-import org.matrix.vector.manager.data.repository.CanaryItem
-import org.matrix.vector.manager.data.repository.CanaryOverview
-import org.matrix.vector.manager.data.repository.CanarySpan
-import org.matrix.vector.manager.ui.components.InstalledMarkerRow
-import org.matrix.vector.manager.ui.components.exactTime
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.manager.R
+import com.system.core.manager.data.github.GitHubRepository
+import com.system.core.manager.data.github.TimelineCommit
+import com.system.core.manager.data.repository.CanaryItem
+import com.system.core.manager.data.repository.CanaryOverview
+import com.system.core.manager.data.repository.CanarySpan
+import com.system.core.manager.ui.components.InstalledMarkerRow
+import com.system.core.manager.ui.components.exactTime
+import com.system.core.ui.theme.Mono
 
 /**
  * Canary builds: what has landed since the reader's own build, and how to go and run it.

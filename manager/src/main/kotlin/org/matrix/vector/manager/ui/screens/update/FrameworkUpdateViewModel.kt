@@ -1,9 +1,9 @@
-package org.matrix.vector.manager.ui.screens.update
+package com.system.core.manager.ui.screens.update
 
-import org.matrix.vector.manager.data.repository.ReleaseDirection
-import org.matrix.vector.manager.data.github.FrameworkRelease
-import org.matrix.vector.manager.data.github.ZipVariant
-import org.matrix.vector.manager.data.github.CanaryArtifact
+import com.system.core.manager.data.repository.ReleaseDirection
+import com.system.core.manager.data.github.FrameworkRelease
+import com.system.core.manager.data.github.ZipVariant
+import com.system.core.manager.data.github.CanaryArtifact
 import kotlinx.coroutines.flow.combine
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -13,12 +13,12 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.manager.data.repository.FlashStep
-import org.matrix.vector.manager.data.repository.FrameworkUpdateState
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
+import com.system.core.ipc.IManagerService
+import com.system.core.manager.data.repository.FlashStep
+import com.system.core.manager.data.repository.FrameworkUpdateState
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.logE
+import com.system.core.manager.logW
 
 /** Which root implementation is in charge, and whether it can be flashed through. */
 data class RootState(val code: Int = IManagerService.ROOT_UNKNOWN) {
@@ -45,15 +45,15 @@ data class RootState(val code: Int = IManagerService.ROOT_UNKNOWN) {
         when (code) {
             IManagerService.ROOT_MULTIPLE ->
                 androidx.compose.ui.res.stringResource(
-                    org.matrix.vector.manager.R.string.update_root_multiple
+                    com.system.core.manager.R.string.update_root_multiple
                 )
             IManagerService.ROOT_NONE ->
                 androidx.compose.ui.res.stringResource(
-                    org.matrix.vector.manager.R.string.update_no_root
+                    com.system.core.manager.R.string.update_no_root
                 )
             IManagerService.ROOT_UNKNOWN ->
                 androidx.compose.ui.res.stringResource(
-                    org.matrix.vector.manager.R.string.update_root_unknown
+                    com.system.core.manager.R.string.update_root_unknown
                 )
             else -> null
         }

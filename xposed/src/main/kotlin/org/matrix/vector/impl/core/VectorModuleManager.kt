@@ -1,4 +1,4 @@
-package org.matrix.vector.impl.core
+package com.system.core.impl.core
 
 import android.os.Build
 import android.os.Bundle
@@ -14,14 +14,14 @@ import java.io.File
 import java.lang.ref.WeakReference
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.locks.ReentrantLock
-import org.matrix.vector.ipc.HotReloadOutcome
-import org.matrix.vector.ipc.LoadedModule
-import org.matrix.vector.util.Log
-import org.matrix.vector.impl.VectorContext
-import org.matrix.vector.impl.VectorLifecycleManager
-import org.matrix.vector.impl.hooks.VectorHookBuilder
-import org.matrix.vector.impl.utils.VectorModuleClassLoader
-import org.matrix.vector.nativebridge.NativeAPI
+import com.system.core.ipc.HotReloadOutcome
+import com.system.core.ipc.LoadedModule
+import com.system.core.util.Log
+import com.system.core.impl.SystemCoreContext
+import com.system.core.impl.VectorLifecycleManager
+import com.system.core.impl.hooks.VectorHookBuilder
+import com.system.core.impl.utils.VectorModuleClassLoader
+import com.system.core.nativebridge.NativeAPI
 
 /**
  * Responsible for loading modules into the target process. Handles ClassLoader isolation and
@@ -35,7 +35,7 @@ object VectorModuleManager {
     // removes it. A reload holds a local strong list for the cycle instead.
     private class Generation(
         val classLoader: ClassLoader,
-        val context: VectorContext,
+        val context: SystemCoreContext,
         entries: List<XposedModule>,
         val isSystemServer: Boolean,
         val processName: String,
@@ -138,7 +138,7 @@ object VectorModuleManager {
 
             // Create the Context that will be injected into the module
             val vectorContext =
-                VectorContext(
+                SystemCoreContext(
                     packageName = module.packageName,
                     applicationInfo = module.applicationInfo,
                     service = module.service, // Our IPC client
@@ -238,7 +238,7 @@ object VectorModuleManager {
         val old =
             generations[packageName]
                 ?: return unsupported(
-                    "$packageName is not loaded in ${VectorServiceClient.processName}"
+                    "$packageName is not loaded in ${SystemCoreServiceClient.processName}"
                 )
         if (newModule.code.moduleClassNames.size != 1) {
             return unsupported("$packageName does not declare exactly one Java entry class")

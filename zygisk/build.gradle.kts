@@ -33,7 +33,7 @@ val injectedPackageUid = rootProject.extra["injectedPackageUid"] as Int
 val defaultManagerPackageName = rootProject.extra["defaultManagerPackageName"] as String
 
 android {
-    namespace = "org.matrix.vector"
+    namespace = "com.system.core"
 
     defaultConfig {
         multiDexEnabled = false
@@ -272,7 +272,7 @@ val resourceOwners =
         "de.robv.android.xposed.XposedInit",
         "de.robv.android.xposed.callbacks.XC_InitPackageResources",
         "de.robv.android.xposed.callbacks.XC_LayoutInflated",
-        "org.matrix.vector.legacy.LegacyDelegateImpl\$ResourceProxy",
+        "com.system.core.legacy.LegacyDelegateImpl\$ResourceProxy",
     )
 
 /** Every type named anywhere in [cls] — its shape, its members and its instruction stream. */

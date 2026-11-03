@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.home
+package com.system.core.manager.ui.screens.home
 
 import android.os.Build
 import androidx.compose.animation.AnimatedVisibility
@@ -63,20 +63,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import org.matrix.vector.manager.ui.theme.LocalizedOverlay
-import org.matrix.vector.manager.R
-import org.matrix.vector.ui.ChoiceRow
-import org.matrix.vector.ui.SheetAction
-import org.matrix.vector.ui.SheetHeading
-import org.matrix.vector.ui.ToggleRow
-import org.matrix.vector.ui.net.DohSettingSection
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.ColorWheel
-import org.matrix.vector.ui.ambience.AmbienceKind
-import org.matrix.vector.ui.navigation.LocalNavigator
-import org.matrix.vector.ui.theme.SeedScheme
-import org.matrix.vector.ui.theme.ThemeMode
-import org.matrix.vector.ui.R as UiR
+import com.system.core.manager.ui.theme.LocalizedOverlay
+import com.system.core.manager.R
+import com.system.core.ui.ChoiceRow
+import com.system.core.ui.SheetAction
+import com.system.core.ui.SheetHeading
+import com.system.core.ui.ToggleRow
+import com.system.core.ui.net.DohSettingSection
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.ColorWheel
+import com.system.core.ui.ambience.AmbienceKind
+import com.system.core.ui.navigation.LocalNavigator
+import com.system.core.ui.theme.SeedScheme
+import com.system.core.ui.theme.ThemeMode
+import com.system.core.ui.R as UiR
 
 /**
  * How this screen looks, edited from this screen.
@@ -105,7 +105,7 @@ import org.matrix.vector.ui.R as UiR
 fun HomeAppearanceSheet(onDismiss: () -> Unit) {
     val settings = ServiceLocator.settings
     // Read out here rather than inside the sheet. A ModalBottomSheet is a subcomposition, so the
-    // locals VectorApp provides do reach into it, but the navigator is wanted for one callback and
+    // locals SystemCoreApp provides do reach into it, but the navigator is wanted for one callback and
     // nothing about it changes between here and there.
     val navigator = LocalNavigator.current
     val themeMode by settings.themeMode.collectAsStateWithLifecycle()

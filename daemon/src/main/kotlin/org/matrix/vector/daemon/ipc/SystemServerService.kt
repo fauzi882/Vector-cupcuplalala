@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.ipc
+package com.system.core.daemon.ipc
 
 import android.os.Binder
 import android.os.Build
@@ -8,9 +8,9 @@ import android.os.IServiceCallback
 import android.os.Parcel
 import android.os.ServiceManager
 import android.util.Log
-import org.matrix.vector.ipc.IFrameworkService
-import org.matrix.vector.daemon.*
-import org.matrix.vector.daemon.system.getSystemServiceManager
+import com.system.core.ipc.IFrameworkService
+import com.system.core.daemon.*
+import com.system.core.daemon.system.getSystemServiceManager
 
 private const val TAG = "VectorSystemServer"
 

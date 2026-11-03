@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 /**
  * GitHub-flavoured markdown, as the HTML the store's renderer already knows how to display.

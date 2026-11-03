@@ -1,14 +1,14 @@
-package org.matrix.vector.manager.ipc
+package com.system.core.manager.ipc
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.withContext
-import org.matrix.vector.ipc.IFrameworkInstallReceiver
+import com.system.core.ipc.IFrameworkInstallReceiver
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
+import com.system.core.ipc.IManagerService
+import com.system.core.manager.logE
+import com.system.core.manager.logW
 
 /**
  * Every call the manager makes to the daemon, as coroutines.
@@ -185,7 +185,7 @@ class DaemonClient(private val serviceState: StateFlow<IManagerService?>) {
 
     suspend fun setModuleScope(
         packageName: String,
-        applications: List<org.matrix.vector.ipc.ScopeEntry>,
+        applications: List<com.system.core.ipc.ScopeEntry>,
     ): Result<Boolean> = runIpc { it.setModuleScope(packageName, applications) }
 
     /**
@@ -200,7 +200,7 @@ class DaemonClient(private val serviceState: StateFlow<IManagerService?>) {
      */
     suspend fun getModuleScope(
         packageName: String
-    ): Result<List<org.matrix.vector.ipc.ScopeEntry>> = runIpc {
+    ): Result<List<com.system.core.ipc.ScopeEntry>> = runIpc {
         it.getModuleScope(packageName)
             ?: throw IllegalArgumentException("$packageName has no scope to read")
     }
@@ -266,7 +266,7 @@ class DaemonClient(private val serviceState: StateFlow<IManagerService?>) {
 
     suspend fun isSepolicyLoaded(): Result<Boolean> = runIpc { it.isSepolicyLoaded }
 
-    suspend fun getUsers(): Result<List<org.matrix.vector.ipc.DeviceUser>> = runIpc { it.users
+    suspend fun getUsers(): Result<List<com.system.core.ipc.DeviceUser>> = runIpc { it.users
     }
 
     suspend fun isSystemServerAttached(): Result<Boolean> = runIpc { it.isSystemServerAttached }

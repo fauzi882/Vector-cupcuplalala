@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.ui.Modifier
@@ -29,7 +29,7 @@ fun Modifier.contextClickable(onClick: () -> Unit, onLongClick: (() -> Unit)? = 
  * The secondary button's press, taken before anything underneath can read it as a tap.
  *
  * On [Initial][PointerEventPass.Initial], the pass that runs before the one `combinedClickable`
- * listens on — the same way [org.matrix.vector.ui.navigation.PanelBar] gets ahead of the item it
+ * listens on — the same way [com.system.core.ui.navigation.PanelBar] gets ahead of the item it
  * wraps — and every event of the press is consumed, which is what keeps the click from landing:
  * foundation asks for a press nothing else has taken, and for a release nothing else has taken.
  *

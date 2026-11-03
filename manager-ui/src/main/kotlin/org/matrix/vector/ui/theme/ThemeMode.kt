@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.theme
+package com.system.core.ui.theme
 
 /** How an app resolves light vs dark. Persisted under the string keys used here. */
 enum class ThemeMode(val key: String) {

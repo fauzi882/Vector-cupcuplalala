@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -20,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
-import org.matrix.vector.ui.locale.currentLocale
+import com.system.core.ui.locale.currentLocale
 import java.util.Locale
 
 /**

@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.logs
+package com.system.core.ui.logs
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -25,8 +25,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.matrix.vector.ui.R
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.ui.R
+import com.system.core.ui.theme.Mono
 
 /**
  * A stack trace, read as a list rather than as a wall of text.

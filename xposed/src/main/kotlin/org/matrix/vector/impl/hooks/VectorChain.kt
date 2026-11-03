@@ -1,11 +1,11 @@
-package org.matrix.vector.impl.hooks
+package com.system.core.impl.hooks
 
 import io.github.libxposed.api.XposedInterface.Chain
 import io.github.libxposed.api.XposedInterface.ExceptionMode
 import io.github.libxposed.api.XposedInterface.Hooker
 import java.lang.reflect.Executable
 import java.util.Collections
-import org.matrix.vector.util.Utils
+import com.system.core.util.Utils
 
 /**
  * A registered hook configuration, stored natively by [HookBridge].

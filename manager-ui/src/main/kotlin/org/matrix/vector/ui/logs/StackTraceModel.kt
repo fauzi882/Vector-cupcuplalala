@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.logs
+package com.system.core.ui.logs
 
 /** One throwable in the chain: what it was, what it said, and where it had been. */
 data class CrashSection(
@@ -32,7 +32,7 @@ data class CrashSection(
 
 /** One `at ...` line, split at the point where it stops being a name and starts being a place. */
 data class CrashFrame(
-    /** `org.matrix.vector.manager.ui.MainActivity.onCreate` */
+    /** `com.system.core.manager.ui.MainActivity.onCreate` */
     val method: String,
     /** `MainActivity.kt:39`, or null for a native frame, which prints no source. */
     val location: String?,
@@ -61,7 +61,7 @@ data class CrashFrame(
  */
 private val OUR_PACKAGES =
     listOf(
-        "org.matrix.vector",
+        "com.system.core",
         "org.lsposed",
         "de.robv.android.xposed",
         "io.github.libxposed",

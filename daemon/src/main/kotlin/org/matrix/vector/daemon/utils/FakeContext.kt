@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.utils
+package com.system.core.daemon.utils
 
 import android.content.ContentResolver
 import android.content.ContextWrapper
@@ -10,8 +10,8 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory
 import android.os.Build
 import hidden.HiddenApiBridge
 import java.io.File
-import org.matrix.vector.daemon.data.FileSystem
-import org.matrix.vector.daemon.system.packageManager as sysPackageManager
+import com.system.core.daemon.data.FileSystem
+import com.system.core.daemon.system.packageManager as sysPackageManager
 
 /** A stub context used by the daemon to initilize database, forge intents and notifications. */
 class FakeContext(private val fakePackageName: String = "android") : ContextWrapper(null) {

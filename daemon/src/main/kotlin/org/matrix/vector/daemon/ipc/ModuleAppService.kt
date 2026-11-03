@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.ipc
+package com.system.core.daemon.ipc
 
 import android.content.AttributionSource
 import android.os.Binder
@@ -20,18 +20,18 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
-import org.matrix.vector.ipc.HotReloadOutcome
-import org.matrix.vector.ipc.LoadedModule
-import org.matrix.vector.ipc.IHotReloadOutcomeReceiver
-import org.matrix.vector.daemon.BuildConfig
-import org.matrix.vector.daemon.data.ConfigCache
-import org.matrix.vector.daemon.data.FileSystem
-import org.matrix.vector.daemon.data.ModuleDatabase
-import org.matrix.vector.daemon.data.PreferenceStore
-import org.matrix.vector.daemon.system.NotificationManager
-import org.matrix.vector.daemon.system.ProcessFreezer
-import org.matrix.vector.daemon.system.PER_USER_RANGE
-import org.matrix.vector.daemon.system.activityManager
+import com.system.core.ipc.HotReloadOutcome
+import com.system.core.ipc.LoadedModule
+import com.system.core.ipc.IHotReloadOutcomeReceiver
+import com.system.core.daemon.BuildConfig
+import com.system.core.daemon.data.ConfigCache
+import com.system.core.daemon.data.FileSystem
+import com.system.core.daemon.data.ModuleDatabase
+import com.system.core.daemon.data.PreferenceStore
+import com.system.core.daemon.system.NotificationManager
+import com.system.core.daemon.system.ProcessFreezer
+import com.system.core.daemon.system.PER_USER_RANGE
+import com.system.core.daemon.system.activityManager
 
 private const val TAG = "VectorModuleAppService"
 

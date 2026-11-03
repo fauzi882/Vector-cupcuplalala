@@ -1,15 +1,15 @@
-package org.matrix.vector.manager.ui.theme
+package com.system.core.manager.ui.theme
 
 import androidx.compose.runtime.Composable
 import java.util.Locale
 import kotlinx.coroutines.flow.StateFlow
-import org.matrix.vector.manager.BuildConfig
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.locale.LocaleController
-import org.matrix.vector.ui.locale.Translator
-import org.matrix.vector.ui.locale.LocalizedContent as SharedLocalizedContent
-import org.matrix.vector.ui.locale.LocalizedOverlay as SharedLocalizedOverlay
-import org.matrix.vector.ui.locale.availableLocales as sharedAvailableLocales
+import com.system.core.manager.BuildConfig
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.locale.LocaleController
+import com.system.core.ui.locale.Translator
+import com.system.core.ui.locale.LocalizedContent as SharedLocalizedContent
+import com.system.core.ui.locale.LocalizedOverlay as SharedLocalizedOverlay
+import com.system.core.ui.locale.availableLocales as sharedAvailableLocales
 
 /**
  * This app's answer to "which language, and which are on offer".

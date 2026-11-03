@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode

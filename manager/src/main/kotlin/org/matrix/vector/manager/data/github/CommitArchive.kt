@@ -1,10 +1,10 @@
-package org.matrix.vector.manager.data.github
+package com.system.core.manager.data.github
 
 import java.io.File
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import org.matrix.vector.manager.logW
+import com.system.core.manager.logW
 
 /**
  * Every commit the app has ever seen, kept on disk.

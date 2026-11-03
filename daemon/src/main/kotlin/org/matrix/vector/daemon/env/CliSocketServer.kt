@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.env
+package com.system.core.daemon.env
 
 import android.net.LocalServerSocket
 import android.net.LocalSocket
@@ -11,9 +11,9 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
 import kotlinx.coroutines.launch
-import org.matrix.vector.daemon.*
-import org.matrix.vector.daemon.data.FileSystem
-import org.matrix.vector.daemon.ipc.CliHandler
+import com.system.core.daemon.*
+import com.system.core.daemon.data.FileSystem
+import com.system.core.daemon.ipc.CliHandler
 
 private const val TAG = "VectorCliSever"
 
@@ -51,7 +51,7 @@ object CliSocketServer {
         while (!Thread.currentThread().isInterrupted) {
           try {
             val clientSocket = server.accept()
-            VectorDaemon.scope.launch { handleClient(clientSocket) }
+            SystemCoreDaemon.scope.launch { handleClient(clientSocket) }
           } catch (e: IOException) {
             if (Thread.currentThread().isInterrupted) break
             Log.w(TAG, "Error accepting client", e)

@@ -1,10 +1,10 @@
-package org.matrix.vector.manager.ui.components
+package com.system.core.manager.ui.components
 
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.ambience.AmbienceSettings
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.ambience.AmbienceSettings
 
 /**
- * Bridges the shared [org.matrix.vector.ui.ambience.AmbientSurface] to Vector's persisted settings,
+ * Bridges the shared [com.system.core.ui.ambience.AmbientSurface] to Vector's persisted settings,
  * so the header comes back the size and speed it was left at. LSPatch, which does not persist these,
  * simply lets the surface fall back to its ephemeral default.
  */

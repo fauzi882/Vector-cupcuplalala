@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.appearance
+package com.system.core.ui.appearance
 
 import kotlinx.coroutines.flow.StateFlow
 

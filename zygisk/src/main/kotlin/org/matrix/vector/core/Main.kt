@@ -1,16 +1,16 @@
-package org.matrix.vector.core
+package com.system.core.core
 
 import android.os.IBinder
 import android.os.Process
-import org.matrix.vector.ipc.IFrameworkService
-import org.matrix.vector.util.Log
-import org.matrix.vector.util.Utils
-import org.matrix.vector.BuildConfig
-import org.matrix.vector.GrapheneDclHooker
-import org.matrix.vector.ParasiticManagerHooker
-import org.matrix.vector.ParasiticManagerSystemHooker
-import org.matrix.vector.Startup
-import org.matrix.vector.impl.core.VectorServiceClient
+import com.system.core.ipc.IFrameworkService
+import com.system.core.util.Log
+import com.system.core.util.Utils
+import com.system.core.BuildConfig
+import com.system.core.GrapheneDclHooker
+import com.system.core.ParasiticManagerHooker
+import com.system.core.ParasiticManagerSystemHooker
+import com.system.core.Startup
+import com.system.core.impl.core.SystemCoreServiceClient
 
 /** Main entry point for the Java-side loader, invoked via JNI from the Vector Zygisk module. */
 object Main {
@@ -46,7 +46,7 @@ object Main {
         Startup.initXposed(isSystem, niceName, appDir, appService)
 
         // Configure logging levels from the service client
-        runCatching { Log.muted = VectorServiceClient.isLogMuted }
+        runCatching { Log.muted = SystemCoreServiceClient.isLogMuted }
             .onFailure { t -> Utils.logE("Failed to configure logs from service", t) }
 
         // Check if this process is the designated Vector Manager.

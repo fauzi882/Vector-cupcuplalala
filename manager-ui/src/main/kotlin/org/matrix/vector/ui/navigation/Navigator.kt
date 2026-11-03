@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.navigation
+package com.system.core.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect

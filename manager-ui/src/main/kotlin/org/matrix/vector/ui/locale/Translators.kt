@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.locale
+package com.system.core.ui.locale
 
 import java.util.Locale
 

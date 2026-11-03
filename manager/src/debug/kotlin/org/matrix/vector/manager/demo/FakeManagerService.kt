@@ -1,17 +1,17 @@
-package org.matrix.vector.manager.demo
+package com.system.core.manager.demo
 
 import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.ResolveInfo
 import android.os.Build
 import android.os.ParcelFileDescriptor
-import org.matrix.vector.ipc.DeviceUser
-import org.matrix.vector.ipc.IFrameworkInstallReceiver
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.ipc.ModuleLoadFailure
-import org.matrix.vector.ipc.ScopeEntry
+import com.system.core.ipc.DeviceUser
+import com.system.core.ipc.IFrameworkInstallReceiver
+import com.system.core.ipc.IManagerService
+import com.system.core.ipc.ModuleLoadFailure
+import com.system.core.ipc.ScopeEntry
 import rikka.parcelablelist.ParcelableListSlice
-import org.matrix.vector.manager.data.model.versionCodeCompat
+import com.system.core.manager.data.model.versionCodeCompat
 
 /**
  * The daemon, as a script.

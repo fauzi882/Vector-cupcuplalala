@@ -1,8 +1,8 @@
-package org.matrix.vector.manager.ui.screens.home
+package com.system.core.manager.ui.screens.home
 import kotlinx.coroutines.CancellationException
-import org.matrix.vector.manager.data.repository.FrameworkUpdateState
-import org.matrix.vector.manager.data.repository.LaunchShortcut
-import org.matrix.vector.manager.data.repository.ManagerInstallStep
+import com.system.core.manager.data.repository.FrameworkUpdateState
+import com.system.core.manager.data.repository.LaunchShortcut
+import com.system.core.manager.data.repository.ManagerInstallStep
 import android.os.Build
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -20,15 +20,15 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlin.random.Random
 import kotlinx.coroutines.launch
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.manager.data.github.CommunityFeed
-import org.matrix.vector.manager.data.github.GitHubRepository
-import org.matrix.vector.manager.data.model.ManagerCopy
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
-import org.matrix.vector.manager.ui.components.FrameworkState
+import com.system.core.ipc.IManagerService
+import com.system.core.manager.data.github.CommunityFeed
+import com.system.core.manager.data.github.GitHubRepository
+import com.system.core.manager.data.model.ManagerCopy
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.logE
+import com.system.core.manager.logW
+import com.system.core.manager.ui.components.FrameworkState
 
 /** A specific reason the framework is degraded, so the UI never has to say merely "something". */
 enum class HealthIssue {
@@ -476,7 +476,7 @@ class HomeViewModel(
      * The rail, laid out: commits with their elapsed-time gaps, month boundaries, named silences,
      * and the marker showing where the reader's own build sits in the history.
      */
-    val feedItems: StateFlow<List<org.matrix.vector.manager.data.github.FeedItem>> =
+    val feedItems: StateFlow<List<com.system.core.manager.data.github.FeedItem>> =
         combine(_feed, _status, _authorFilter) { feed, status, filter ->
                 // The framework's version when the daemon is up, otherwise this manager's own.
                 // Both are `git rev-list --count origin/master` on the same repository, so either
@@ -484,8 +484,8 @@ class HomeViewModel(
                 // would never appear at all while the daemon is not answering.
                 val installed =
                     if (status.versionCode > 0) status.versionCode
-                    else org.matrix.vector.manager.BuildConfig.VERSION_CODE.toLong()
-                org.matrix.vector.manager.data.github.FeedLayout.build(
+                    else com.system.core.manager.BuildConfig.VERSION_CODE.toLong()
+                com.system.core.manager.data.github.FeedLayout.build(
                     feed.filteredBy(filter),
                     installed,
                 )

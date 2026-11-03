@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -25,7 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.ui.theme.Mono
 
 /**
  * A version number, marked when something newer exists.

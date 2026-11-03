@@ -58,7 +58,7 @@ android {
 
   externalNativeBuild { cmake { path("src/main/jni/CMakeLists.txt") } }
 
-  namespace = "org.matrix.vector.daemon"
+  namespace = "com.system.core.daemon"
 }
 
 /**
@@ -94,7 +94,7 @@ abstract class GenerateSignInfoTask : DefaultTask() {
     PrintStream(outSrc)
         .print(
             """
-            |package org.matrix.vector.daemon.utils
+            |package com.system.core.daemon.utils
             |
             |object SignInfo {
             |    @JvmField

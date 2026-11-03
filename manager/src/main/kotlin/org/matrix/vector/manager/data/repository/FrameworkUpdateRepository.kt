@@ -1,11 +1,11 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import org.matrix.vector.manager.data.github.FrameworkRelease
-import org.matrix.vector.manager.data.github.GitHubRepository
-import org.matrix.vector.manager.data.model.buildStamp
+import com.system.core.manager.data.github.FrameworkRelease
+import com.system.core.manager.data.github.GitHubRepository
+import com.system.core.manager.data.model.buildStamp
 
 /**
  * Whether a newer build of the framework exists, and which one this reader may be offered.

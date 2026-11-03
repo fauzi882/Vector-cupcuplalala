@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import android.content.ClipData
 import android.content.ClipboardManager

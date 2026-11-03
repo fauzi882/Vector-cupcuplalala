@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.navigation
+package com.system.core.ui.navigation
 
 /**
  * Where the floating nav ball rests, injected so the shared [FloatingPanelNav] does not reach into

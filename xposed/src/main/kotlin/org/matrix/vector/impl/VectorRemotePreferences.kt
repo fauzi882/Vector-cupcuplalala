@@ -1,4 +1,4 @@
-package org.matrix.vector.impl
+package com.system.core.impl
 
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -7,9 +7,9 @@ import android.util.ArraySet
 import io.github.libxposed.api.error.XposedFrameworkError
 import java.util.TreeMap
 import java.util.concurrent.ConcurrentHashMap
-import org.matrix.vector.ipc.IModuleService
-import org.matrix.vector.ipc.IRemotePreferenceCallback
-import org.matrix.vector.util.Log
+import com.system.core.ipc.IModuleService
+import com.system.core.ipc.IRemotePreferenceCallback
+import com.system.core.util.Log
 
 @Suppress("DEPRECATION", "UNCHECKED_CAST")
 private inline fun <reified T> Bundle.getSerializableCompat(key: String): T? {
@@ -81,7 +81,7 @@ internal class VectorRemotePreferences(service: IModuleService, group: String) :
                 }
             }
         } catch (e: RemoteException) {
-            Log.e("VectorContext", "Failed to request remote preferences for group: $group", e)
+            Log.e("SystemCoreContext", "Failed to request remote preferences for group: $group", e)
             throw XposedFrameworkError("Remote preferences IPC failure", e)
         }
     }

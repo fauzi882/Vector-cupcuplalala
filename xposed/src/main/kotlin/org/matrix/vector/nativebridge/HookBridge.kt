@@ -1,4 +1,4 @@
-package org.matrix.vector.nativebridge
+package com.system.core.nativebridge
 
 import dalvik.annotation.optimization.FastNative
 import java.lang.reflect.Executable

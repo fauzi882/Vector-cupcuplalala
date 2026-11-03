@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.navigation
+package com.system.core.manager.ui.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ReceiptLong
@@ -7,9 +7,9 @@ import androidx.compose.material.icons.rounded.Extension
 import androidx.compose.material.icons.rounded.Home
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
-import org.matrix.vector.manager.R
-import org.matrix.vector.ui.R as UiR
-import org.matrix.vector.ui.navigation.TopLevelDestination
+import com.system.core.manager.R
+import com.system.core.ui.R as UiR
+import com.system.core.ui.navigation.TopLevelDestination
 
 /**
  * Every destination, as a type.

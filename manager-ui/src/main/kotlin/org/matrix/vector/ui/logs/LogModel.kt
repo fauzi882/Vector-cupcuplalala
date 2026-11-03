@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.logs
+package com.system.core.ui.logs
 
 /**
  * The shape of a parsed log, format-agnostic.

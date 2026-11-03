@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.system
+package com.system.core.daemon.system
 
 import android.app.IActivityManager
 import android.content.IIntentReceiver
@@ -16,7 +16,7 @@ import android.util.Log
 import java.io.File
 import java.lang.reflect.Method
 import java.util.stream.Collectors
-import org.matrix.vector.daemon.utils.getRealUsers
+import com.system.core.daemon.utils.getRealUsers
 
 private const val TAG = "VectorSystem"
 const val PER_USER_RANGE = 100000

@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.module
+package com.system.core.ui.module
 
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager

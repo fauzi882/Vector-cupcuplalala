@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.ipc
+package com.system.core.daemon.ipc
 
 import android.os.IBinder
 import android.os.Parcel
@@ -10,15 +10,15 @@ import io.github.libxposed.service.HookedProcess
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicLong
-import org.matrix.vector.ipc.LoadedModule
-import org.matrix.vector.ipc.IProcessChannel
-import org.matrix.vector.ipc.IFrameworkService
-import org.matrix.vector.daemon.data.ConfigCache
-import org.matrix.vector.daemon.data.FileSystem
-import org.matrix.vector.daemon.system.FIRST_APPLICATION_UID
-import org.matrix.vector.daemon.system.PER_USER_RANGE
-import org.matrix.vector.daemon.utils.InstallerVerifier
-import org.matrix.vector.daemon.utils.ObfuscationManager
+import com.system.core.ipc.LoadedModule
+import com.system.core.ipc.IProcessChannel
+import com.system.core.ipc.IFrameworkService
+import com.system.core.daemon.data.ConfigCache
+import com.system.core.daemon.data.FileSystem
+import com.system.core.daemon.system.FIRST_APPLICATION_UID
+import com.system.core.daemon.system.PER_USER_RANGE
+import com.system.core.daemon.utils.InstallerVerifier
+import com.system.core.daemon.utils.ObfuscationManager
 
 private const val TAG = "VectorFrameworkService"
 

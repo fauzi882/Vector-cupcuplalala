@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.data
+package com.system.core.daemon.data
 
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase

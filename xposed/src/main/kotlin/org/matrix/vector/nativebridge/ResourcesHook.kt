@@ -1,4 +1,4 @@
-package org.matrix.vector.nativebridge
+package com.system.core.nativebridge
 
 import android.content.res.Resources
 

@@ -1,4 +1,4 @@
-package org.matrix.vector.service
+package com.system.core.service
 
 import android.app.ActivityThread
 import android.os.Binder
@@ -7,8 +7,8 @@ import android.os.IBinder.DeathRecipient
 import android.os.Parcel
 import hidden.HiddenApiBridge.Binder_allowBlocking
 import hidden.HiddenApiBridge.Context_getActivityToken
-import org.matrix.vector.ipc.IVectorDaemon
-import org.matrix.vector.util.Log
+import com.system.core.ipc.ISystemCoreDaemon
+import com.system.core.util.Log
 
 /**
  * Manages manual Binder transactions for the Vector framework.
@@ -30,7 +30,7 @@ object BridgeService {
 
     @Volatile private var serviceBinder: IBinder? = null
 
-    @Volatile private var service: IVectorDaemon? = null
+    @Volatile private var service: ISystemCoreDaemon? = null
 
     /** Cleans up service references if the remote Vector daemon crashes. */
     private val serviceRecipient: DeathRecipient = DeathRecipient {
@@ -41,12 +41,12 @@ object BridgeService {
     }
 
     /** Returns the active Vector daemin service interface. */
-    @JvmStatic fun getService(): IVectorDaemon? = service
+    @JvmStatic fun getService(): ISystemCoreDaemon? = service
 
     /**
      * Initializes the client-side connection to the Vector daemin service.
      *
-     * @param binder The raw binder for [IVectorDaemon].
+     * @param binder The raw binder for [ISystemCoreDaemon].
      */
     private fun receiveFromBridge(binder: IBinder?) {
         if (binder == null) {
@@ -65,7 +65,7 @@ object BridgeService {
         // Allow blocking calls since we are often in a synchronous fork path
         val blockingBinder = Binder_allowBlocking(binder)
         serviceBinder = blockingBinder
-        service = IVectorDaemon.Stub.asInterface(blockingBinder)
+        service = ISystemCoreDaemon.Stub.asInterface(blockingBinder)
 
         runCatching { blockingBinder.linkToDeath(serviceRecipient, 0) }
             .onFailure { Log.e(TAG, "Failed to link to service death", it) }

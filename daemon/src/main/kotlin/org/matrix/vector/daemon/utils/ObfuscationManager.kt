@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.utils
+package com.system.core.daemon.utils
 
 import android.os.SharedMemory
 

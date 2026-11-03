@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.ambience
+package com.system.core.ui.ambience
 
 /**
  * How an [AmbientSurface] persists per-kind scale / speed / variant. Injected so the library carries

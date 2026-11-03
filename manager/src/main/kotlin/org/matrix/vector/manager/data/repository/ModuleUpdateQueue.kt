@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -8,9 +8,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import org.matrix.vector.ui.store.ReleaseAsset
-import org.matrix.vector.ui.store.RepoVersion
-import org.matrix.vector.ui.store.StoreInstall
+import com.system.core.ui.store.ReleaseAsset
+import com.system.core.ui.store.RepoVersion
+import com.system.core.ui.store.StoreInstall
 
 /**
  * Several module updates, installed one after another.

@@ -1,11 +1,11 @@
-package org.matrix.vector.manager.ui.components
+package com.system.core.manager.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
-import org.matrix.vector.ui.contextClickable
+import com.system.core.ui.contextClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -45,10 +45,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import java.util.Calendar
-import org.matrix.vector.manager.R
-import org.matrix.vector.ui.locale.currentLocale
-import org.matrix.vector.manager.data.github.TimelineCommit
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.manager.R
+import com.system.core.ui.locale.currentLocale
+import com.system.core.manager.data.github.TimelineCommit
+import com.system.core.ui.theme.Mono
 
 /**
  * One row of the commit rail.

@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import com.google.gson.Gson
 import com.google.gson.JsonParser
@@ -16,15 +16,15 @@ import okhttp3.CacheControl
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
-import org.matrix.vector.ui.store.StoreDataSource
-import org.matrix.vector.ui.store.OnlineModule
-import org.matrix.vector.ui.store.RepoVersion
-import org.matrix.vector.ui.store.StoreCatalog
-import org.matrix.vector.manager.data.model.versionCodeCompat
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.logI
-import org.matrix.vector.manager.logW
+import com.system.core.ui.store.StoreDataSource
+import com.system.core.ui.store.OnlineModule
+import com.system.core.ui.store.RepoVersion
+import com.system.core.ui.store.StoreCatalog
+import com.system.core.manager.data.model.versionCodeCompat
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.logI
+import com.system.core.manager.logW
 
 /**
  * The Store's data: the online catalogue, and what this device already has of it.

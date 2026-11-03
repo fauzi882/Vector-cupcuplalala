@@ -1,4 +1,4 @@
-package org.matrix.vector.impl.core
+package com.system.core.impl.core
 
 import android.app.Instrumentation
 import android.content.Context

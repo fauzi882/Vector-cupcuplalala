@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ipc
+package com.system.core.manager.ipc
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -9,9 +9,9 @@ import androidx.core.content.IntentCompat
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
-import org.matrix.vector.manager.BuildConfig
-import org.matrix.vector.manager.logW
-import org.matrix.vector.ui.module.PER_USER_RANGE
+import com.system.core.manager.BuildConfig
+import com.system.core.manager.logW
+import com.system.core.ui.module.PER_USER_RANGE
 
 sealed class PackageEvent {
     data class Added(val packageName: String, val userId: Int) : PackageEvent()

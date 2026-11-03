@@ -1,10 +1,10 @@
-package org.matrix.vector.impl.hookers
+package com.system.core.impl.hookers
 
 import io.github.libxposed.api.XposedInterface
-import org.matrix.vector.impl.VectorLifecycleManager
-import org.matrix.vector.impl.core.VectorDeopter
-import org.matrix.vector.impl.di.VectorBootstrap
-import org.matrix.vector.impl.hooks.VectorHookBuilder
+import com.system.core.impl.VectorLifecycleManager
+import com.system.core.impl.core.VectorDeopter
+import com.system.core.impl.di.SystemCoreBootstrap
+import com.system.core.impl.hooks.VectorHookBuilder
 
 /**
  * Intercepts the system server initialization process to deoptimize targets and attach bootstrap
@@ -72,6 +72,6 @@ object StartBootstrapServicesHooker : XposedInterface.Hooker {
         VectorLifecycleManager.dispatchSystemServerStarting(classLoader)
 
         // Dispatch to legacy framework modules
-        VectorBootstrap.withLegacy { delegate -> delegate.onSystemServerLoaded(classLoader) }
+        SystemCoreBootstrap.withLegacy { delegate -> delegate.onSystemServerLoaded(classLoader) }
     }
 }

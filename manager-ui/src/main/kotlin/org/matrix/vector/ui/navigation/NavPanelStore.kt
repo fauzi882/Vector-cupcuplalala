@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.navigation
+package com.system.core.ui.navigation
 
 import kotlinx.coroutines.flow.StateFlow
 

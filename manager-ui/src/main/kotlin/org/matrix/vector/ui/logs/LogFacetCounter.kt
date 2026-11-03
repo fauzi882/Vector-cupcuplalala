@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.logs
+package com.system.core.ui.logs
 
 /**
  * Counts what a log holds while deciding what the current query keeps, in the host's one scanning pass.

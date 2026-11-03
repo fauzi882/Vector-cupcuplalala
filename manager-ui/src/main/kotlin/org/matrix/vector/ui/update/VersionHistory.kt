@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.update
+package com.system.core.ui.update
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -25,9 +25,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import org.matrix.vector.ui.LocalDialogLocalizer
-import org.matrix.vector.ui.SheetHeading
-import org.matrix.vector.ui.sheetRowColors
+import com.system.core.ui.LocalDialogLocalizer
+import com.system.core.ui.SheetHeading
+import com.system.core.ui.sheetRowColors
 
 /**
  * Where a version stands relative to the running build — the one distinction each row is marked by.

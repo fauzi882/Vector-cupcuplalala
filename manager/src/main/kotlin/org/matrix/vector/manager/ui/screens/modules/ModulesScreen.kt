@@ -1,9 +1,9 @@
-package org.matrix.vector.manager.ui.screens.modules
+package com.system.core.manager.ui.screens.modules
 
-import org.matrix.vector.ui.REACH_ICON_SIZE
-import org.matrix.vector.ui.UpdatableVersion
-import org.matrix.vector.ui.ModuleRow as SharedModuleRow
-import org.matrix.vector.ui.ApiBadge as SharedApiBadge
+import com.system.core.ui.REACH_ICON_SIZE
+import com.system.core.ui.UpdatableVersion
+import com.system.core.ui.ModuleRow as SharedModuleRow
+import com.system.core.ui.ApiBadge as SharedApiBadge
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.animateColorAsState
@@ -87,8 +87,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.launch
-import org.matrix.vector.ui.SharedAlertDialog
-import org.matrix.vector.manager.ui.theme.LocalizedOverlay
+import com.system.core.ui.SharedAlertDialog
+import com.system.core.manager.ui.theme.LocalizedOverlay
 import android.text.format.Formatter
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -100,28 +100,28 @@ import androidx.compose.material3.ListItem
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.rememberBottomSheetState
-import org.matrix.vector.ui.store.ReleaseAsset
-import org.matrix.vector.ui.store.RepoVersion
-import org.matrix.vector.ui.store.StoreEntry
-import org.matrix.vector.manager.data.repository.ModuleUpdateQueue
-import org.matrix.vector.ui.SheetHeading
-import org.matrix.vector.ui.sheetRowColors
-import org.matrix.vector.ui.store.StoreChannel
-import org.matrix.vector.ui.store.releasesOn
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.manager.R
-import org.matrix.vector.ui.R as UiR
-import org.matrix.vector.manager.data.model.InstalledModule
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.AppIcon
-import org.matrix.vector.manager.ui.components.PackageActionSheet
-import org.matrix.vector.ui.SnackbarTone
-import org.matrix.vector.ui.SharedSnackbarHost
-import org.matrix.vector.ui.show
-import org.matrix.vector.manager.ui.components.PackageActionResult
-import org.matrix.vector.ui.PanelHeader
-import org.matrix.vector.ui.SearchField
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.ui.store.ReleaseAsset
+import com.system.core.ui.store.RepoVersion
+import com.system.core.ui.store.StoreEntry
+import com.system.core.manager.data.repository.ModuleUpdateQueue
+import com.system.core.ui.SheetHeading
+import com.system.core.ui.sheetRowColors
+import com.system.core.ui.store.StoreChannel
+import com.system.core.ui.store.releasesOn
+import com.system.core.ipc.IManagerService
+import com.system.core.manager.R
+import com.system.core.ui.R as UiR
+import com.system.core.manager.data.model.InstalledModule
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.AppIcon
+import com.system.core.manager.ui.components.PackageActionSheet
+import com.system.core.ui.SnackbarTone
+import com.system.core.ui.SharedSnackbarHost
+import com.system.core.ui.show
+import com.system.core.manager.ui.components.PackageActionResult
+import com.system.core.ui.PanelHeader
+import com.system.core.ui.SearchField
+import com.system.core.ui.theme.Mono
 import androidx.compose.material3.Surface
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback

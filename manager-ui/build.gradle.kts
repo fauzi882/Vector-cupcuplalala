@@ -19,7 +19,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.matrix.vector.ui"
+    namespace = "com.system.core.ui"
     buildFeatures { compose = true }
 }
 

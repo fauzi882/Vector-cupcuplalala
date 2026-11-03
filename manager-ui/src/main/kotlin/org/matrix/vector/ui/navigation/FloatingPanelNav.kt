@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.navigation
+package com.system.core.ui.navigation
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.Animatable
@@ -69,7 +69,7 @@ import kotlin.math.min
 import kotlin.math.roundToInt
 import kotlin.math.sin
 import kotlinx.coroutines.launch
-import org.matrix.vector.ui.R
+import com.system.core.ui.R
 
 /** Drawn size of the ball, which is also its touch target — hence not smaller than 48dp. */
 private val BALL_SIZE = 52.dp

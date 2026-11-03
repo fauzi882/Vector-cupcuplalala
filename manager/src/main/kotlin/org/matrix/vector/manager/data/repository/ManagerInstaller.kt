@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import android.content.Context
 import android.content.pm.PackageInfo
@@ -15,15 +15,15 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.manager.BuildConfig
-import org.matrix.vector.manager.data.model.ManagerCopy
-import org.matrix.vector.manager.data.model.versionCodeCompat
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.ipc.commitForResult
-import org.matrix.vector.manager.ipc.requestReplaceExisting
+import com.system.core.ipc.IManagerService
+import com.system.core.manager.BuildConfig
+import com.system.core.manager.data.model.ManagerCopy
+import com.system.core.manager.data.model.versionCodeCompat
+import com.system.core.manager.logE
+import com.system.core.manager.logW
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.ipc.commitForResult
+import com.system.core.manager.ipc.requestReplaceExisting
 
 /** Where installing the manager as an app has got to. */
 sealed interface ManagerInstallStep {
@@ -63,7 +63,7 @@ sealed interface ManagerInstallStep {
  * system's `REQUEST_INSTALL_PACKAGES` prompt instead of happening silently under the host's
  * `INSTALL_PACKAGES`.
  *
- * The daemon already expects this: `ConfigCache` resolves `org.matrix.vector.manager`, verifies its
+ * The daemon already expects this: `ConfigCache` resolves `com.system.core.manager`, verifies its
  * signature, and remembers its UID, so an installed manager is granted the same binder as the
  * injected one and needs no further arrangement.
  */

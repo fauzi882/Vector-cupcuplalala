@@ -1,13 +1,13 @@
-package org.matrix.vector.manager.data.model
+package com.system.core.manager.data.model
 
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.util.Base64
 import java.io.File
 import java.util.concurrent.ConcurrentHashMap
-import org.matrix.vector.manager.logW
-import org.matrix.vector.ui.module.ModuleDetection
-import org.matrix.vector.ui.module.ModuleManifest
+import com.system.core.manager.logW
+import com.system.core.ui.module.ModuleDetection
+import com.system.core.ui.module.ModuleManifest
 
 /**
  * Remembers which installed packages are modules, so the answer is computed once per APK.

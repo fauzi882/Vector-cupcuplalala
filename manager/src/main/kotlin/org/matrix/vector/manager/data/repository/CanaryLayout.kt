@@ -1,9 +1,9 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
-import org.matrix.vector.manager.data.github.ClosedIssue
-import org.matrix.vector.manager.data.github.CommunityFeed
-import org.matrix.vector.manager.data.github.FrameworkRelease
-import org.matrix.vector.manager.data.github.TimelineCommit
+import com.system.core.manager.data.github.ClosedIssue
+import com.system.core.manager.data.github.CommunityFeed
+import com.system.core.manager.data.github.FrameworkRelease
+import com.system.core.manager.data.github.TimelineCommit
 
 /**
  * What the canary list draws, in order.

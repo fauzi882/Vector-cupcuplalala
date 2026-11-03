@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.components
+package com.system.core.manager.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

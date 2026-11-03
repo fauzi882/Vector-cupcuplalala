@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 import android.graphics.Typeface
 import android.text.style.BulletSpan

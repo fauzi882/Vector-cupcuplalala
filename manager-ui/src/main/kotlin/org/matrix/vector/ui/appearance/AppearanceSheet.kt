@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.appearance
+package com.system.core.ui.appearance
 
 import android.os.Build
 import androidx.compose.animation.AnimatedVisibility
@@ -57,15 +57,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import org.matrix.vector.ui.ChoiceRow
-import org.matrix.vector.ui.ColorWheel
-import org.matrix.vector.ui.LocalDialogLocalizer
-import org.matrix.vector.ui.R
-import org.matrix.vector.ui.SheetHeading
-import org.matrix.vector.ui.ToggleRow
-import org.matrix.vector.ui.ambience.AmbienceKind
-import org.matrix.vector.ui.theme.SeedScheme
-import org.matrix.vector.ui.theme.ThemeMode
+import com.system.core.ui.ChoiceRow
+import com.system.core.ui.ColorWheel
+import com.system.core.ui.LocalDialogLocalizer
+import com.system.core.ui.R
+import com.system.core.ui.SheetHeading
+import com.system.core.ui.ToggleRow
+import com.system.core.ui.ambience.AmbienceKind
+import com.system.core.ui.theme.SeedScheme
+import com.system.core.ui.theme.ThemeMode
 
 /**
  * The look of the app, edited in a sheet: theme mode, accent colour (wallpaper / seed / wheel),

@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.github
+package com.system.core.manager.data.github
 
 import java.io.File
 import java.util.concurrent.TimeUnit
@@ -9,8 +9,8 @@ import kotlinx.serialization.json.Json
 import okhttp3.CacheControl
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
+import com.system.core.manager.logE
+import com.system.core.manager.logW
 
 /**
  * Activity on the project's GitHub repository: the commits, the people behind them, the repository

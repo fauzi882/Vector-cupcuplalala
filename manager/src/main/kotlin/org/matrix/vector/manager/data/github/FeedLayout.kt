@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.github
+package com.system.core.manager.data.github
 
 import java.util.Calendar
 import java.util.Locale

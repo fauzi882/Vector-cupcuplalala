@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon
+package com.system.core.daemon
 
 import android.app.ActivityManager
 import android.app.ActivityThread
@@ -21,20 +21,20 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import org.matrix.vector.daemon.data.ConfigCache
-import org.matrix.vector.daemon.data.FileSystem
-import org.matrix.vector.daemon.env.CliSocketServer
-import org.matrix.vector.daemon.env.Dex2OatServer
-import org.matrix.vector.daemon.env.LogcatMonitor
-import org.matrix.vector.daemon.ipc.BRIDGE_TRANSACTION_CODE
-import org.matrix.vector.daemon.ipc.ManagerService
-import org.matrix.vector.daemon.ipc.SystemServerService
-import org.matrix.vector.daemon.utils.applyNotificationWorkaround
+import com.system.core.daemon.data.ConfigCache
+import com.system.core.daemon.data.FileSystem
+import com.system.core.daemon.env.CliSocketServer
+import com.system.core.daemon.env.Dex2OatServer
+import com.system.core.daemon.env.LogcatMonitor
+import com.system.core.daemon.ipc.BRIDGE_TRANSACTION_CODE
+import com.system.core.daemon.ipc.ManagerService
+import com.system.core.daemon.ipc.SystemServerService
+import com.system.core.daemon.utils.applyNotificationWorkaround
 
-private const val TAG = "VectorDaemon"
+private const val TAG = "SystemCoreDaemon"
 private const val ACTION_SEND_BINDER = 1
 
-object VectorDaemon {
+object SystemCoreDaemon {
   private val exceptionHandler = CoroutineExceptionHandler { context, throwable ->
     Log.e(TAG, "Caught fatal coroutine exception in background task!", throwable)
   }
@@ -123,7 +123,7 @@ object VectorDaemon {
 
     // Initializes system frameworks inside the daemon process
     ActivityThread.systemMain()
-    DdmHandleAppName.setAppName("org.matrix.vector.daemon", 0)
+    DdmHandleAppName.setAppName("com.system.core.daemon", 0)
 
     // Wait for Android core services
     waitForSystemService("package")
@@ -141,7 +141,7 @@ object VectorDaemon {
     val isVerboseLog = ManagerService.isVerboseLogEnabled()
 
     // Setup IPC channel for applications by injecting DaemonService binder
-    sendToBridge(VectorService.asBinder(), false)
+    sendToBridge(SystemCoreService.asBinder(), false)
 
     if (!isVerboseLog) {
       LogcatMonitor.stopVerbose()

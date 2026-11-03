@@ -1,7 +1,7 @@
-package org.matrix.vector.impl.hookers
+package com.system.core.impl.hookers
 
 import io.github.libxposed.api.XposedInterface
-import org.matrix.vector.impl.di.VectorBootstrap
+import com.system.core.impl.di.SystemCoreBootstrap
 
 /**
  * Intercepts the early ApplicationThread attachment phase. Triggers the legacy compatibility layer
@@ -15,7 +15,7 @@ object AppAttachHooker : XposedInterface.Hooker {
         // Delegate legacy module loading via DI
         val activityThread = chain.thisObject
         if (activityThread != null) {
-            VectorBootstrap.withLegacy { delegate -> delegate.loadModules(activityThread) }
+            SystemCoreBootstrap.withLegacy { delegate -> delegate.loadModules(activityThread) }
         }
 
         return result

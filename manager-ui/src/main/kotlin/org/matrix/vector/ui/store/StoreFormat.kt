@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 import java.text.DateFormat
 import java.time.Instant

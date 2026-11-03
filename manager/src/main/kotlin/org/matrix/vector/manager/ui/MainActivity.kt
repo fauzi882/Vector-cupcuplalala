@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui
+package com.system.core.manager.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,14 +7,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import org.matrix.vector.manager.data.repository.LaunchShortcut
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.ui.navigation.DeepLink
-import org.matrix.vector.manager.ui.screens.splash.SplashGate
-import org.matrix.vector.manager.ui.theme.LocalizedContent
-import org.matrix.vector.manager.ui.theme.LocalizedOverlay
-import org.matrix.vector.manager.ui.theme.VectorTheme
-import org.matrix.vector.ui.LocalDialogLocalizer
+import com.system.core.manager.data.repository.LaunchShortcut
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.ui.navigation.DeepLink
+import com.system.core.manager.ui.screens.splash.SplashGate
+import com.system.core.manager.ui.theme.LocalizedContent
+import com.system.core.manager.ui.theme.LocalizedOverlay
+import com.system.core.manager.ui.theme.VectorTheme
+import com.system.core.ui.LocalDialogLocalizer
 
 /**
  * The only activity.
@@ -79,7 +79,7 @@ class MainActivity : ComponentActivity() {
                 CompositionLocalProvider(
                     LocalDialogLocalizer provides { content -> LocalizedOverlay(content) }
                 ) {
-                    VectorTheme { SplashGate { VectorApp() } }
+                    VectorTheme { SplashGate { SystemCoreApp() } }
                 }
             }
         }

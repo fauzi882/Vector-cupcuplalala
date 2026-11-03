@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.logs
+package com.system.core.ui.logs
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
@@ -23,8 +23,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
-import org.matrix.vector.ui.R
-import org.matrix.vector.ui.copyToClipboard
+import com.system.core.ui.R
+import com.system.core.ui.copyToClipboard
 
 /**
  * A trace from the log, given the room the log itself does not have.

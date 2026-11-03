@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.navigation
+package com.system.core.manager.ui.navigation
 
 import android.content.Intent
 import android.net.Uri

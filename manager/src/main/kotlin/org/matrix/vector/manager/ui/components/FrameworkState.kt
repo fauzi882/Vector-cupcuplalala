@@ -1,7 +1,7 @@
-package org.matrix.vector.manager.ui.components
+package com.system.core.manager.ui.components
 
-import org.matrix.vector.manager.R
-import org.matrix.vector.ui.StatusTone
+import com.system.core.manager.R
+import com.system.core.ui.StatusTone
 
 /** The four states the framework can be in, plus the moment before we know. */
 enum class FrameworkState {
@@ -21,7 +21,7 @@ enum class FrameworkState {
     Mismatched,
 }
 
-/** How each framework state paints the shared [org.matrix.vector.ui.StatusHeader]. */
+/** How each framework state paints the shared [com.system.core.ui.StatusHeader]. */
 fun FrameworkState.toTone(): StatusTone =
     when (this) {
         FrameworkState.Active -> StatusTone.Active

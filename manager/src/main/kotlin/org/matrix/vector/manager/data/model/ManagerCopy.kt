@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.model
+package com.system.core.manager.data.model
 
 /**
  * Which copy of the manager, if any, is installed beside the one that is running.

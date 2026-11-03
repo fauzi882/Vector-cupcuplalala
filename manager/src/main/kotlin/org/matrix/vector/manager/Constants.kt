@@ -1,9 +1,9 @@
-package org.matrix.vector.manager
+package com.system.core.manager
 
 import android.os.IBinder
 import kotlin.system.exitProcess
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.manager.di.ServiceLocator
+import com.system.core.ipc.IManagerService
+import com.system.core.manager.di.ServiceLocator
 
 /**
  * The one entry point the framework reaches by reflection.

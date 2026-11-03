@@ -1,12 +1,12 @@
-package org.matrix.vector.manager.data.log
+package com.system.core.manager.data.log
 
 import android.content.Context
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import org.matrix.vector.manager.BuildConfig
-import org.matrix.vector.manager.stackTraceOf
+import com.system.core.manager.BuildConfig
+import com.system.core.manager.stackTraceOf
 
 /**
  * Keeps the manager's own crashes where the log export already looks for them.
@@ -60,7 +60,7 @@ object CrashRecorder {
     /**
      * Takes over the default handler, once per process, and discards what another build left.
      *
-     * Called from [org.matrix.vector.manager.di.ServiceLocator.attach], early in the activity's
+     * Called from [com.system.core.manager.di.ServiceLocator.attach], early in the activity's
      * `onCreate` and before anything that could fail, so the handler is in place before any screen
      * exists.
      */

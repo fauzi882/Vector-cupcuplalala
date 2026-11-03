@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.logs
+package com.system.core.ui.logs
 
 import android.content.Context
 import android.content.Intent
@@ -107,15 +107,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.launch
-import org.matrix.vector.ui.LocalDialogLocalizer
-import org.matrix.vector.ui.PanelHeader
-import org.matrix.vector.ui.SearchField
-import org.matrix.vector.ui.SharedAlertDialog
-import org.matrix.vector.ui.ToggleRow
-import org.matrix.vector.ui.R
-import org.matrix.vector.ui.copyToClipboard
-import org.matrix.vector.ui.sheetRowColors
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.ui.LocalDialogLocalizer
+import com.system.core.ui.PanelHeader
+import com.system.core.ui.SearchField
+import com.system.core.ui.SharedAlertDialog
+import com.system.core.ui.ToggleRow
+import com.system.core.ui.R
+import com.system.core.ui.copyToClipboard
+import com.system.core.ui.sheetRowColors
+import com.system.core.ui.theme.Mono
 
 /**
  * The diagnose surface: two log streams, read from the end.

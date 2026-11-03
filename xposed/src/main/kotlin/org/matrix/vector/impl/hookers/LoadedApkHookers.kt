@@ -1,4 +1,4 @@
-package org.matrix.vector.impl.hookers
+package com.system.core.impl.hookers
 
 import android.content.pm.ApplicationInfo
 import android.os.Build
@@ -6,10 +6,10 @@ import androidx.annotation.RequiresApi
 import io.github.libxposed.api.XposedInterface
 import java.util.Collections
 import java.util.WeakHashMap
-import org.matrix.vector.util.Utils
-import org.matrix.vector.impl.VectorLifecycleManager
-import org.matrix.vector.impl.di.LegacyPackageInfo
-import org.matrix.vector.impl.di.VectorBootstrap
+import com.system.core.util.Utils
+import com.system.core.impl.VectorLifecycleManager
+import com.system.core.impl.di.LegacyPackageInfo
+import com.system.core.impl.di.SystemCoreBootstrap
 
 /** Safe reflection helper */
 private inline fun <reified T> Any.getFieldValue(name: String): T? {
@@ -94,7 +94,7 @@ object LoadedApkCtorHooker : XposedInterface.Hooker {
 
         val packageName = loadedApk.getFieldValue<String>("mPackageName") ?: return result
 
-        VectorBootstrap.withLegacy { delegate ->
+        SystemCoreBootstrap.withLegacy { delegate ->
             if (!delegate.isResourceHookingDisabled) {
                 val resDir = loadedApk.getFieldValue<String>("mResDir")
                 delegate.setPackageNameForResDir(packageName, resDir)
@@ -185,7 +185,7 @@ object LoadedApkCreateCLHooker : XposedInterface.Hooker {
             if (isInitialLoad) {
                 val mIncludeCode = loadedApk.getFieldValue<Boolean>("mIncludeCode") ?: true
                 if (ctx.isFirstPackage || mIncludeCode) {
-                    VectorBootstrap.withLegacy { delegate ->
+                    SystemCoreBootstrap.withLegacy { delegate ->
                         delegate.onPackageLoaded(
                             LegacyPackageInfo(
                                 ctx.legacyPackageName,

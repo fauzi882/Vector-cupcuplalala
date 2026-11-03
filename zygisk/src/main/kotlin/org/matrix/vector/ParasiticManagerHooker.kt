@@ -1,4 +1,4 @@
-package org.matrix.vector
+package com.system.core
 
 import android.annotation.SuppressLint
 import android.app.ActivityThread
@@ -23,9 +23,9 @@ import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.lang.reflect.Method
 import java.util.concurrent.ConcurrentHashMap
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.util.Utils
-import org.matrix.vector.impl.core.VectorServiceClient
+import com.system.core.ipc.IManagerService
+import com.system.core.util.Utils
+import com.system.core.impl.core.SystemCoreServiceClient
 
 /** The "Parasite" logic. Injects the manager APK into a host process (shell). */
 @SuppressLint("StaticFieldLeak")
@@ -481,8 +481,8 @@ object ParasiticManagerHooker {
         return try {
             // Asked first: a process the daemon did not launch the manager into gets null here,
             // and there is no point opening the APK for it.
-            val managerBinder = VectorServiceClient.requestManagerService() ?: return false
-            VectorServiceClient.openManagerApk()!!.use { pfd ->
+            val managerBinder = SystemCoreServiceClient.requestManagerService() ?: return false
+            SystemCoreServiceClient.openManagerApk()!!.use { pfd ->
                 val managerService = IManagerService.Stub.asInterface(managerBinder)
 
                 if (isParasitic) {

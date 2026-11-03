@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.model
+package com.system.core.manager.data.model
 
 /**
  * Which API a module was built against, and whether this framework still honours it.

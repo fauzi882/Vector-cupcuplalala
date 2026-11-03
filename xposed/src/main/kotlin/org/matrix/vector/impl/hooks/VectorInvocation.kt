@@ -1,11 +1,11 @@
-package org.matrix.vector.impl.hooks
+package com.system.core.impl.hooks
 
 import java.lang.reflect.Constructor
 import java.lang.reflect.Executable
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
-import org.matrix.vector.nativebridge.HookBridge
+import com.system.core.nativebridge.HookBridge
 
 /**
  * What java.lang.reflect does to a receiver and an argument list before it calls anything, for the

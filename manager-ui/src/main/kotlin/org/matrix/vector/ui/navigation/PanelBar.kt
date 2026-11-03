@@ -3,7 +3,7 @@
     androidx.compose.material3.adaptive.navigationsuite.ExperimentalMaterial3AdaptiveNavigationSuiteApi::class,
 )
 
-package org.matrix.vector.ui.navigation
+package com.system.core.ui.navigation
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
@@ -60,7 +60,7 @@ import androidx.compose.ui.zIndex
 import androidx.navigation3.runtime.NavKey
 import kotlin.math.abs
 import kotlin.math.roundToInt
-import org.matrix.vector.ui.R
+import com.system.core.ui.R
 
 /** What is left of a hidden panel in edit mode: Material's disabled alpha, saying the same. */
 private const val HIDDEN_ALPHA = 0.38f

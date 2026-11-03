@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.log
+package com.system.core.manager.data.log
 
 import android.os.ParcelFileDescriptor
 import java.nio.ByteBuffer
@@ -6,13 +6,13 @@ import java.nio.channels.FileChannel
 import kotlin.math.max
 import kotlin.math.min
 import kotlinx.coroutines.yield
-import org.matrix.vector.ui.logs.LogContent
-import org.matrix.vector.ui.logs.LogFacetCounter
-import org.matrix.vector.ui.logs.LogIndex
-import org.matrix.vector.ui.logs.LogQuery
-import org.matrix.vector.ui.logs.LogRow
-import org.matrix.vector.ui.logs.LogScanResult
-import org.matrix.vector.ui.logs.MAX_LINE_BYTES
+import com.system.core.ui.logs.LogContent
+import com.system.core.ui.logs.LogFacetCounter
+import com.system.core.ui.logs.LogIndex
+import com.system.core.ui.logs.LogQuery
+import com.system.core.ui.logs.LogRow
+import com.system.core.ui.logs.LogScanResult
+import com.system.core.ui.logs.MAX_LINE_BYTES
 
 /**
  * A random-access window onto one of the daemon's log files.

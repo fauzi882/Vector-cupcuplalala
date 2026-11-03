@@ -1,4 +1,4 @@
-package org.matrix.vector.impl
+package com.system.core.impl
 
 import android.content.pm.ApplicationInfo
 import android.os.Build
@@ -6,7 +6,7 @@ import androidx.annotation.RequiresApi
 import io.github.libxposed.api.XposedModule
 import io.github.libxposed.api.XposedModuleInterface.*
 import java.util.concurrent.ConcurrentHashMap
-import org.matrix.vector.util.Log
+import com.system.core.util.Log
 
 /** Manages the dispatching of modern lifecycle events to loaded modules. */
 object VectorLifecycleManager {

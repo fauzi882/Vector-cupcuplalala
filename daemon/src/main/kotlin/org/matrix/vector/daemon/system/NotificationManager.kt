@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.system
+package com.system.core.daemon.system
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -19,10 +19,10 @@ import android.os.SystemClock
 import android.util.Log
 import io.github.libxposed.service.IXposedScopeCallback
 import java.util.UUID
-import org.matrix.vector.daemon.BuildConfig
-import org.matrix.vector.daemon.R
-import org.matrix.vector.daemon.data.FileSystem
-import org.matrix.vector.daemon.utils.FakeContext
+import com.system.core.daemon.BuildConfig
+import com.system.core.daemon.R
+import com.system.core.daemon.data.FileSystem
+import com.system.core.daemon.utils.FakeContext
 
 private const val TAG = "VectorNotificationManager"
 private const val STATUS_CHANNEL_ID = "vector_status"

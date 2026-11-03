@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -21,11 +21,11 @@ import android.graphics.drawable.LayerDrawable
 import android.os.Build
 import androidx.core.content.ContextCompat
 import java.util.UUID
-import org.matrix.vector.manager.BuildConfig
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
-import org.matrix.vector.manager.R
+import com.system.core.manager.BuildConfig
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.logE
+import com.system.core.manager.logW
+import com.system.core.manager.R
 
 /**
  * The launcher entry for a manager that is not installed.
@@ -53,7 +53,7 @@ object LaunchShortcut {
      * Changing this string does not move an existing shortcut, it orphans it: the old one stays on
      * the home screen pointing at whatever it was built with, and [update] can no longer find it.
      */
-    private const val ID = "org.matrix.vector.manager.shortcut"
+    private const val ID = "com.system.core.manager.shortcut"
 
     /** What [ParasiticManagerSystemHooker] matches on to redirect the activity. */
     private val category = "${BuildConfig.MANAGER_PACKAGE_NAME}.LAUNCH_MANAGER"

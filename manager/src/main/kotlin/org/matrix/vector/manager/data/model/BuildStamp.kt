@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.model
+package com.system.core.manager.data.model
 
 /**
  * A build stamp, taken apart: which commit a build came from, and where it was built.

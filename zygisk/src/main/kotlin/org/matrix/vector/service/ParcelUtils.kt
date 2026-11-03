@@ -1,4 +1,4 @@
-package org.matrix.vector.service
+package com.system.core.service
 
 import android.os.Parcel
 import java.lang.reflect.Method

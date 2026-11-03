@@ -1,11 +1,11 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
-import org.matrix.vector.ui.R as UiR
-import org.matrix.vector.ui.ToggleRow
-import org.matrix.vector.ui.ScrollingLabel
-import org.matrix.vector.ui.SheetHeading
-import org.matrix.vector.ui.sheetRowColors
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.ui.R as UiR
+import com.system.core.ui.ToggleRow
+import com.system.core.ui.ScrollingLabel
+import com.system.core.ui.SheetHeading
+import com.system.core.ui.sheetRowColors
+import com.system.core.ui.theme.Mono
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.rememberBottomSheetState
 import androidx.compose.material.icons.rounded.Tune

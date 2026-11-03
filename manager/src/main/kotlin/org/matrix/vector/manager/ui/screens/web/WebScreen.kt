@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.web
+package com.system.core.manager.ui.screens.web
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -52,7 +52,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
-import org.matrix.vector.manager.R
+import com.system.core.manager.R
 
 /**
  * GitHub, inside Vector.

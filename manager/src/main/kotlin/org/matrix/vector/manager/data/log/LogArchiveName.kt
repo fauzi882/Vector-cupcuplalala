@@ -1,8 +1,8 @@
-package org.matrix.vector.manager.data.log
+package com.system.core.manager.data.log
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import org.matrix.vector.manager.BuildConfig
+import com.system.core.manager.BuildConfig
 
 /**
  * What a saved bug report is called, wherever it is saved from.

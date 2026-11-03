@@ -1,10 +1,10 @@
-package org.matrix.vector.daemon.utils
+package com.system.core.daemon.utils
 
 import android.os.Build
 import android.util.Log
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import org.matrix.vector.daemon.system.packageManager
+import com.system.core.daemon.system.packageManager
 
 /**
  * Backs the manager's "Re-optimize" action: drops an app's stale ART profiles and rebuilds its

@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row

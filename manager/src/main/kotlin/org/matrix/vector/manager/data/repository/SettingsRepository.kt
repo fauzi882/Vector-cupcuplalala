@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -6,10 +6,10 @@ import java.time.LocalDate
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import org.matrix.vector.ui.net.NetworkSettings
-import org.matrix.vector.ui.store.RepoVersion
-import org.matrix.vector.ui.store.StoreInstall
-import org.matrix.vector.ui.store.StoreSettings
+import com.system.core.ui.net.NetworkSettings
+import com.system.core.ui.store.RepoVersion
+import com.system.core.ui.store.StoreInstall
+import com.system.core.ui.store.StoreSettings
 
 /**
  * The manager's own preferences: how it looks, what it shows, and what it has been told to stop

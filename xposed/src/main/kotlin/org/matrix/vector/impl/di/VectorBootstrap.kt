@@ -1,4 +1,4 @@
-package org.matrix.vector.impl.di
+package com.system.core.impl.di
 
 import android.content.pm.ApplicationInfo
 import java.lang.reflect.Executable
@@ -50,13 +50,13 @@ interface LegacyFrameworkDelegate {
 }
 
 /** The central registry for framework bootstrapping. */
-object VectorBootstrap {
+object SystemCoreBootstrap {
     @Volatile
     var delegate: LegacyFrameworkDelegate? = null
         private set
 
     fun init(frameworkDelegate: LegacyFrameworkDelegate) {
-        check(delegate == null) { "VectorBootstrap is already initialized!" }
+        check(delegate == null) { "SystemCoreBootstrap is already initialized!" }
         delegate = frameworkDelegate
     }
 

@@ -1,4 +1,4 @@
-package org.matrix.vector.manager
+package com.system.core.manager
 
 import android.util.Log
 import java.io.PrintWriter
@@ -60,7 +60,7 @@ fun logI(msg: String, tr: Throwable? = null) = emit(Log.INFO, msg, tr)
 /**
  * A throwable as text, cause chain and all, with none of [Log.getStackTraceString]'s filtering.
  *
- * Shared with [org.matrix.vector.manager.data.log.CrashRecorder], which writes the same text to
+ * Shared with [com.system.core.manager.data.log.CrashRecorder], which writes the same text to
  * disk and had the same trace go missing for the same reason.
  */
 fun stackTraceOf(tr: Throwable): String =

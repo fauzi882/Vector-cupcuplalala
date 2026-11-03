@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.net
+package com.system.core.ui.net
 
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.material.icons.Icons
@@ -9,10 +9,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.flow.StateFlow
-import org.matrix.vector.ui.R
-import org.matrix.vector.ui.SheetHeading
-import org.matrix.vector.ui.StatusNote
-import org.matrix.vector.ui.ToggleRow
+import com.system.core.ui.R
+import com.system.core.ui.SheetHeading
+import com.system.core.ui.StatusNote
+import com.system.core.ui.ToggleRow
 
 /**
  * The Network section of a settings sheet: the DoH switch and, beneath it, what the last lookup

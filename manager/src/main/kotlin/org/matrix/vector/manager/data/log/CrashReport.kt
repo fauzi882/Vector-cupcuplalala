@@ -1,8 +1,8 @@
-package org.matrix.vector.manager.data.log
+package com.system.core.manager.data.log
 
-import org.matrix.vector.ui.logs.CrashFrame
-import org.matrix.vector.ui.logs.CrashSection
-import org.matrix.vector.ui.logs.parseStackTrace
+import com.system.core.ui.logs.CrashFrame
+import com.system.core.ui.logs.CrashSection
+import com.system.core.ui.logs.parseStackTrace
 
 /**
  * A recorded crash, in the shape the screens ask questions of.

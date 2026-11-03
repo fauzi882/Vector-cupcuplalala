@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import org.matrix.vector.ui.R
+import com.system.core.ui.R
 
 /** A group the list can be asked to bring to the front. Several may apply at once. */
 enum class StorePriority(val labelRes: Int) {

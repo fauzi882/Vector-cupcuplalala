@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui
+package com.system.core.manager.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Box
@@ -21,44 +21,44 @@ import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
-import org.matrix.vector.manager.data.repository.VectorLogSource
-import org.matrix.vector.manager.data.repository.VectorStoreInstallHost
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.ui.navigation.Canary
-import org.matrix.vector.manager.ui.navigation.CrashTrace
-import org.matrix.vector.manager.ui.navigation.DeepLink
-import org.matrix.vector.manager.ui.navigation.FrameworkUpdate
-import org.matrix.vector.manager.ui.navigation.LogTrace
-import org.matrix.vector.manager.ui.navigation.Scope
-import org.matrix.vector.manager.ui.navigation.StoreDetail
-import org.matrix.vector.manager.ui.navigation.SystemStatus
-import org.matrix.vector.manager.ui.navigation.TOP_LEVEL_DESTINATIONS
-import org.matrix.vector.manager.ui.navigation.TopLevelRoute
-import org.matrix.vector.manager.ui.navigation.Troubleshoot
-import org.matrix.vector.manager.ui.navigation.VectorFloatingNavSettings
-import org.matrix.vector.manager.ui.navigation.VectorNavPanelStore
-import org.matrix.vector.manager.ui.navigation.Web
-import org.matrix.vector.manager.ui.screens.canary.CanaryScreen
-import org.matrix.vector.manager.ui.screens.home.CrashTraceScreen
-import org.matrix.vector.manager.ui.screens.home.HomeScreen
-import org.matrix.vector.manager.ui.screens.home.SystemStatusScreen
-import org.matrix.vector.manager.ui.screens.modules.ModulesScreen
-import org.matrix.vector.manager.ui.screens.modules.ScopeScreen
-import org.matrix.vector.manager.ui.screens.report.TroubleshootScreen
-import org.matrix.vector.manager.ui.screens.update.FrameworkUpdateScreen
-import org.matrix.vector.manager.ui.screens.web.WebScreen
-import org.matrix.vector.manager.ui.screens.web.fetchStoreSubresource
-import org.matrix.vector.manager.ui.screens.web.forWebView
-import org.matrix.vector.ui.logs.LogTraceScreen
-import org.matrix.vector.ui.logs.LogsScreen
-import org.matrix.vector.ui.navigation.FloatingPanelNav
-import org.matrix.vector.ui.navigation.LocalNavigator
-import org.matrix.vector.ui.navigation.Navigator
-import org.matrix.vector.ui.navigation.PanelBar
-import org.matrix.vector.ui.navigation.PanelEditDone
-import org.matrix.vector.ui.navigation.rememberNavigator
-import org.matrix.vector.ui.store.RepoDetailsScreen
-import org.matrix.vector.ui.store.RepoScreen
+import com.system.core.manager.data.repository.VectorLogSource
+import com.system.core.manager.data.repository.VectorStoreInstallHost
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.ui.navigation.Canary
+import com.system.core.manager.ui.navigation.CrashTrace
+import com.system.core.manager.ui.navigation.DeepLink
+import com.system.core.manager.ui.navigation.FrameworkUpdate
+import com.system.core.manager.ui.navigation.LogTrace
+import com.system.core.manager.ui.navigation.Scope
+import com.system.core.manager.ui.navigation.StoreDetail
+import com.system.core.manager.ui.navigation.SystemStatus
+import com.system.core.manager.ui.navigation.TOP_LEVEL_DESTINATIONS
+import com.system.core.manager.ui.navigation.TopLevelRoute
+import com.system.core.manager.ui.navigation.Troubleshoot
+import com.system.core.manager.ui.navigation.VectorFloatingNavSettings
+import com.system.core.manager.ui.navigation.VectorNavPanelStore
+import com.system.core.manager.ui.navigation.Web
+import com.system.core.manager.ui.screens.canary.CanaryScreen
+import com.system.core.manager.ui.screens.home.CrashTraceScreen
+import com.system.core.manager.ui.screens.home.HomeScreen
+import com.system.core.manager.ui.screens.home.SystemStatusScreen
+import com.system.core.manager.ui.screens.modules.ModulesScreen
+import com.system.core.manager.ui.screens.modules.ScopeScreen
+import com.system.core.manager.ui.screens.report.TroubleshootScreen
+import com.system.core.manager.ui.screens.update.FrameworkUpdateScreen
+import com.system.core.manager.ui.screens.web.WebScreen
+import com.system.core.manager.ui.screens.web.fetchStoreSubresource
+import com.system.core.manager.ui.screens.web.forWebView
+import com.system.core.ui.logs.LogTraceScreen
+import com.system.core.ui.logs.LogsScreen
+import com.system.core.ui.navigation.FloatingPanelNav
+import com.system.core.ui.navigation.LocalNavigator
+import com.system.core.ui.navigation.Navigator
+import com.system.core.ui.navigation.PanelBar
+import com.system.core.ui.navigation.PanelEditDone
+import com.system.core.ui.navigation.rememberNavigator
+import com.system.core.ui.store.RepoDetailsScreen
+import com.system.core.ui.store.RepoScreen
 
 /**
  * The app shell.
@@ -75,7 +75,7 @@ import org.matrix.vector.ui.store.RepoScreen
  * puts the container back for as long as it lasts.
  */
 @Composable
-fun VectorApp() {
+fun SystemCoreApp() {
     val navigator = rememberNavigator(VectorNavPanelStore, TOP_LEVEL_DESTINATIONS)
 
     // Where the launch intent asked to open. The activity has no back stack to act on, so it leaves

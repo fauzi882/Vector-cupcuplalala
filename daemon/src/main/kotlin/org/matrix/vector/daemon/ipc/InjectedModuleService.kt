@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.ipc
+package com.system.core.daemon.ipc
 
 import android.os.Binder
 import android.os.Bundle
@@ -8,12 +8,12 @@ import android.util.Log
 import io.github.libxposed.service.IXposedService
 import java.io.Serializable
 import java.util.concurrent.ConcurrentHashMap
-import org.matrix.vector.ipc.IModuleService
-import org.matrix.vector.ipc.IRemotePreferenceCallback
-import org.matrix.vector.daemon.data.ConfigCache
-import org.matrix.vector.daemon.data.FileSystem
-import org.matrix.vector.daemon.data.PreferenceStore
-import org.matrix.vector.daemon.system.PER_USER_RANGE
+import com.system.core.ipc.IModuleService
+import com.system.core.ipc.IRemotePreferenceCallback
+import com.system.core.daemon.data.ConfigCache
+import com.system.core.daemon.data.FileSystem
+import com.system.core.daemon.data.PreferenceStore
+import com.system.core.daemon.system.PER_USER_RANGE
 
 private const val TAG = "VectorInjectedModuleService"
 
@@ -61,7 +61,7 @@ class InjectedModuleService(private val packageName: String) : IModuleService.St
 
   override fun openRemoteFile(path: String): ParcelFileDescriptor? {
     // XposedInterface#openRemoteFile documents FileNotFoundException for a missing *or* forbidden
-    // path. Returning null lets VectorContext raise exactly that; throwing here surfaced a
+    // path. Returning null lets SystemCoreContext raise exactly that; throwing here surfaced a
     // RemoteException for a missing file and an IllegalArgumentException for a rejected path.
     val userId = Binder.getCallingUid() / PER_USER_RANGE
     return runCatching {

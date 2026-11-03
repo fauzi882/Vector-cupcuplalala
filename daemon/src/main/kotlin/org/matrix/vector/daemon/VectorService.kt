@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon
+package com.system.core.daemon
 
 import android.app.IApplicationThread
 import android.content.Context
@@ -15,21 +15,21 @@ import android.util.Log
 import hidden.HiddenApiBridge
 import io.github.libxposed.service.IXposedScopeCallback
 import kotlinx.coroutines.launch
-import org.matrix.vector.ipc.ScopeEntry
-import org.matrix.vector.ipc.IVectorDaemon
-import org.matrix.vector.ipc.IFrameworkService
-import org.matrix.vector.daemon.data.ConfigCache
-import org.matrix.vector.daemon.data.ModuleDatabase
-import org.matrix.vector.daemon.data.PreferenceStore
-import org.matrix.vector.daemon.data.ProcessScope
-import org.matrix.vector.daemon.ipc.FrameworkService
-import org.matrix.vector.daemon.ipc.ManagerService
-import org.matrix.vector.daemon.ipc.ModuleAppService
-import org.matrix.vector.daemon.system.*
+import com.system.core.ipc.ScopeEntry
+import com.system.core.ipc.ISystemCoreDaemon
+import com.system.core.ipc.IFrameworkService
+import com.system.core.daemon.data.ConfigCache
+import com.system.core.daemon.data.ModuleDatabase
+import com.system.core.daemon.data.PreferenceStore
+import com.system.core.daemon.data.ProcessScope
+import com.system.core.daemon.ipc.FrameworkService
+import com.system.core.daemon.ipc.ManagerService
+import com.system.core.daemon.ipc.ModuleAppService
+import com.system.core.daemon.system.*
 
-private const val TAG = "VectorService"
+private const val TAG = "SystemCoreService"
 
-object VectorService : IVectorDaemon.Stub() {
+object SystemCoreService : ISystemCoreDaemon.Stub() {
 
   private var bootCompleted = false
 
@@ -59,7 +59,7 @@ object VectorService : IVectorDaemon.Stub() {
     // Initialize OS Observers using Coroutines for the dispatch blocks
     registerReceivers()
 
-    if (VectorDaemon.startedAfterSystemServer) {
+    if (SystemCoreDaemon.startedAfterSystemServer) {
       Log.i(TAG, "Started after system_server. Forcing boot completed event.")
       dispatchBootCompleted()
     }
@@ -102,7 +102,7 @@ object VectorService : IVectorDaemon.Stub() {
             sticky: Boolean,
             sendingUser: Int
         ) {
-          VectorDaemon.scope.launch {
+          SystemCoreDaemon.scope.launch {
             when (intent.action) {
               Intent.ACTION_LOCKED_BOOT_COMPLETED -> dispatchBootCompleted()
               Intent.ACTION_CONFIGURATION_CHANGED -> dispatchConfigurationChanged()

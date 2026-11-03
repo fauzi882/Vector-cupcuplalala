@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.utils
+package com.system.core.daemon.utils
 
 import android.app.IServiceConnection
 import android.app.Notification
@@ -10,7 +10,7 @@ import android.os.Build
 import android.os.IUserManager
 import android.util.Log
 import java.lang.ClassNotFoundException
-import org.matrix.vector.daemon.system.*
+import com.system.core.daemon.system.*
 
 private const val TAG = "VectorWorkarounds"
 private val isLenovo = Build.MANUFACTURER.equals("lenovo", ignoreCase = true)

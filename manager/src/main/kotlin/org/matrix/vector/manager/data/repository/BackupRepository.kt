@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 import android.content.Context
 import android.net.Uri
 import java.util.zip.GZIPInputStream
@@ -8,11 +8,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import org.matrix.vector.ipc.ScopeEntry
-import org.matrix.vector.manager.data.log.archiveBuildStamp
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
+import com.system.core.ipc.ScopeEntry
+import com.system.core.manager.data.log.archiveBuildStamp
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.logE
+import com.system.core.manager.logW
 
 /**
  * Backup and restore of which modules are on and what each may hook.

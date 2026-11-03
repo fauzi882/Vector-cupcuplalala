@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.home
+package com.system.core.manager.ui.screens.home
 
 import android.os.Build
 import android.content.Context
@@ -53,8 +53,8 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.manager.BuildConfig
+import com.system.core.ipc.IManagerService
+import com.system.core.manager.BuildConfig
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.ErrorOutline
 import androidx.compose.ui.text.font.FontWeight
@@ -63,20 +63,20 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.ui.draw.alpha
 import android.content.res.Configuration
 import java.util.Locale
-import org.matrix.vector.manager.R
-import org.matrix.vector.ui.R as UiR
-import org.matrix.vector.manager.data.log.CrashRecorder
-import org.matrix.vector.manager.data.model.ManagerCopy
-import org.matrix.vector.manager.data.model.XposedApi
-import org.matrix.vector.manager.data.log.CrashReport
-import org.matrix.vector.manager.data.model.buildStamp
-import org.matrix.vector.manager.data.repository.ManagerInstallStep
-import org.matrix.vector.ui.SnackbarTone
-import org.matrix.vector.ui.SharedSnackbarHost
-import org.matrix.vector.ui.copyToClipboard
-import org.matrix.vector.ui.show
+import com.system.core.manager.R
+import com.system.core.ui.R as UiR
+import com.system.core.manager.data.log.CrashRecorder
+import com.system.core.manager.data.model.ManagerCopy
+import com.system.core.manager.data.model.XposedApi
+import com.system.core.manager.data.log.CrashReport
+import com.system.core.manager.data.model.buildStamp
+import com.system.core.manager.data.repository.ManagerInstallStep
+import com.system.core.ui.SnackbarTone
+import com.system.core.ui.SharedSnackbarHost
+import com.system.core.ui.copyToClipboard
+import com.system.core.ui.show
 import kotlinx.coroutines.launch
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.ui.theme.Mono
 
 /**
  * Everything a bug report needs about this device, on one page.
@@ -493,7 +493,7 @@ private fun rootManagerName(presence: ManagerPresence): String =
         else -> stringResource(R.string.launcher_root_generic)
     }
 
-/** Must match `SECRET_CODE` in the daemon's VectorService, which is what actually answers it. */
+/** Must match `SECRET_CODE` in the daemon's SystemCoreService, which is what actually answers it. */
 private const val SECRET_CODE = "*#*#832867#*#*"
 
 /**

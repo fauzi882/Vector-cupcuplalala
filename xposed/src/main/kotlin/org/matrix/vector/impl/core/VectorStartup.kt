@@ -1,14 +1,14 @@
-package org.matrix.vector.impl.core
+package com.system.core.impl.core
 
 import android.app.ActivityThread
 import android.os.Build
 import android.os.IBinder
 import dalvik.system.DexFile
-import org.matrix.vector.util.Utils
-import org.matrix.vector.ipc.IFrameworkService
-import org.matrix.vector.impl.di.VectorBootstrap
-import org.matrix.vector.impl.hookers.*
-import org.matrix.vector.impl.hooks.VectorHookBuilder
+import com.system.core.util.Utils
+import com.system.core.ipc.IFrameworkService
+import com.system.core.impl.di.SystemCoreBootstrap
+import com.system.core.impl.hookers.*
+import com.system.core.impl.hooks.VectorHookBuilder
 
 /**
  * Modern framework initialization and bootstrap sequence. Deploys interceptors into the ART runtime
@@ -23,7 +23,7 @@ object VectorStartup {
         appDir: String?,
         service: IFrameworkService?,
     ) {
-        VectorServiceClient.init(service, processName ?: "android")
+        SystemCoreServiceClient.init(service, processName ?: "android")
         VectorDeopter.deoptBootMethods()
     }
 
@@ -103,7 +103,7 @@ object VectorStartup {
                     // dispatchSystemServerLoaded below would notify an empty module set.
                     val activityThread = ActivityThread.currentActivityThread()
                     if (activityThread != null) {
-                        VectorBootstrap.withLegacy { it.loadModules(activityThread) }
+                        SystemCoreBootstrap.withLegacy { it.loadModules(activityThread) }
                     } else {
                         Utils.logW(
                             "Late system server injection: no current ActivityThread, modules cannot be loaded"

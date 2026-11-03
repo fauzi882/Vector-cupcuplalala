@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import android.content.Context
 import java.io.File
@@ -18,10 +18,10 @@ import kotlinx.coroutines.withContext
 import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.matrix.vector.ipc.IFrameworkInstallReceiver
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
+import com.system.core.ipc.IFrameworkInstallReceiver
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.logE
+import com.system.core.manager.logW
 
 /** Where a framework flash has got to. */
 sealed interface FlashStep {

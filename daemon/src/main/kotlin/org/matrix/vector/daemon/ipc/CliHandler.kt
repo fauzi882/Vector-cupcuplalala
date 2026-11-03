@@ -1,16 +1,16 @@
-package org.matrix.vector.daemon.ipc
+package com.system.core.daemon.ipc
 
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
 import io.github.libxposed.service.IXposedService
-import org.matrix.vector.ipc.ScopeEntry
-import org.matrix.vector.daemon.BuildConfig
-import org.matrix.vector.daemon.CliRequest
-import org.matrix.vector.daemon.CliResponse
-import org.matrix.vector.daemon.data.ConfigCache
-import org.matrix.vector.daemon.data.ModuleDatabase
-import org.matrix.vector.daemon.data.PreferenceStore
+import com.system.core.ipc.ScopeEntry
+import com.system.core.daemon.BuildConfig
+import com.system.core.daemon.CliRequest
+import com.system.core.daemon.CliResponse
+import com.system.core.daemon.data.ConfigCache
+import com.system.core.daemon.data.ModuleDatabase
+import com.system.core.daemon.data.PreferenceStore
 
 object CliHandler {
 

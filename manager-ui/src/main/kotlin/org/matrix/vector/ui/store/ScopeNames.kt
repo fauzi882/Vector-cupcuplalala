@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 /**
  * A legacy module's declared scope, spelled the way everything else here spells it.

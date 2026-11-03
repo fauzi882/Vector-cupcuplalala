@@ -1,9 +1,9 @@
-package org.matrix.vector.impl.core
+package com.system.core.impl.core
 
 import java.lang.reflect.Executable
-import org.matrix.vector.util.Log
-import org.matrix.vector.util.Utils
-import org.matrix.vector.nativebridge.HookBridge
+import com.system.core.util.Log
+import com.system.core.util.Utils
+import com.system.core.nativebridge.HookBridge
 
 /**
  * Engine responsible for scanning and deoptimizing prebuilt framework methods. Ensures that hooks

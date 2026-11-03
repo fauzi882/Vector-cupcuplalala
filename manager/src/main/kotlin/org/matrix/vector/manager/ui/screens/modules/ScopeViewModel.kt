@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.modules
+package com.system.core.manager.ui.screens.modules
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CancellationException
@@ -12,17 +12,17 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.matrix.vector.ipc.ScopeEntry
-import org.matrix.vector.manager.data.model.AppInfo
-import org.matrix.vector.ui.module.ModuleDetection
-import org.matrix.vector.ui.module.RecommendedScope
-import org.matrix.vector.manager.data.repository.AppRepository
-import org.matrix.vector.manager.data.repository.ModuleRepository
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.data.repository.SettingsRepository
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
+import com.system.core.ipc.ScopeEntry
+import com.system.core.manager.data.model.AppInfo
+import com.system.core.ui.module.ModuleDetection
+import com.system.core.ui.module.RecommendedScope
+import com.system.core.manager.data.repository.AppRepository
+import com.system.core.manager.data.repository.ModuleRepository
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.data.repository.SettingsRepository
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.logE
+import com.system.core.manager.logW
 
 /**
  * A package/user pair, as a value type so set arithmetic is correct.

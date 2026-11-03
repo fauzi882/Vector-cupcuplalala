@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.splash
+package com.system.core.manager.ui.screens.splash
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.animateFloatAsState
@@ -25,10 +25,10 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withTimeoutOrNull
-import org.matrix.vector.manager.R
-import org.matrix.vector.manager.di.ServiceLocator
+import com.system.core.manager.R
+import com.system.core.manager.di.ServiceLocator
 import kotlinx.coroutines.flow.first
-import org.matrix.vector.manager.logW
+import com.system.core.manager.logW
 
 /** How long the animation itself needs, so the statue is never cut off mid-fade. */
 private const val ANIMATION_MS = 800L

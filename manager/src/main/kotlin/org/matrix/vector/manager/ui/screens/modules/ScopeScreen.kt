@@ -1,6 +1,6 @@
-package org.matrix.vector.manager.ui.screens.modules
+package com.system.core.manager.ui.screens.modules
 
-import org.matrix.vector.manager.ui.screens.modules.ScopeViewModel.Companion.SYSTEM_FRAMEWORK_PACKAGE
+import com.system.core.manager.ui.screens.modules.ScopeViewModel.Companion.SYSTEM_FRAMEWORK_PACKAGE
 import androidx.compose.foundation.interaction.DragInteraction
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -16,10 +16,10 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.rememberBottomSheetState
 import androidx.compose.ui.graphics.vector.ImageVector
-import org.matrix.vector.ui.ChoiceRow
-import org.matrix.vector.ui.SheetAction
-import org.matrix.vector.ui.SheetHeading
-import org.matrix.vector.ui.ToggleRow
+import com.system.core.ui.ChoiceRow
+import com.system.core.ui.SheetAction
+import com.system.core.ui.SheetHeading
+import com.system.core.ui.ToggleRow
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -42,7 +42,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.border
-import org.matrix.vector.ui.contextClickable
+import com.system.core.ui.contextClickable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
@@ -99,20 +99,20 @@ import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.launch
-import org.matrix.vector.ui.SharedAlertDialog
-import org.matrix.vector.manager.ui.theme.LocalizedOverlay
-import org.matrix.vector.manager.R
-import org.matrix.vector.manager.data.model.AppInfo
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.AppIcon
-import org.matrix.vector.ui.SnackbarTone
-import org.matrix.vector.ui.SharedSnackbarHost
-import org.matrix.vector.ui.show
-import org.matrix.vector.manager.ui.components.PackageActionResult
-import org.matrix.vector.manager.ui.components.PackageActionSheet
-import org.matrix.vector.ui.SearchField
-import org.matrix.vector.ui.ScrollingLabel
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.ui.SharedAlertDialog
+import com.system.core.manager.ui.theme.LocalizedOverlay
+import com.system.core.manager.R
+import com.system.core.manager.data.model.AppInfo
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.AppIcon
+import com.system.core.ui.SnackbarTone
+import com.system.core.ui.SharedSnackbarHost
+import com.system.core.ui.show
+import com.system.core.manager.ui.components.PackageActionResult
+import com.system.core.manager.ui.components.PackageActionSheet
+import com.system.core.ui.SearchField
+import com.system.core.ui.ScrollingLabel
+import com.system.core.ui.theme.Mono
 
 class ScopeViewModelFactory(private val packageName: String, private val userId: Int) :
     ViewModelProvider.Factory {

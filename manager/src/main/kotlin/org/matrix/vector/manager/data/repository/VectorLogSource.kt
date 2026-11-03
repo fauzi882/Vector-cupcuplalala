@@ -1,15 +1,15 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 
 import android.net.Uri
 import java.io.IOException
 import kotlinx.coroutines.flow.StateFlow
-import org.matrix.vector.manager.data.log.LogFile
-import org.matrix.vector.manager.data.log.logArchiveName
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.logs.LogContent
-import org.matrix.vector.ui.logs.LogResetKind
-import org.matrix.vector.ui.logs.LogSource
-import org.matrix.vector.ui.logs.WriterLabeler
+import com.system.core.manager.data.log.LogFile
+import com.system.core.manager.data.log.logArchiveName
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.logs.LogContent
+import com.system.core.ui.logs.LogResetKind
+import com.system.core.ui.logs.LogSource
+import com.system.core.ui.logs.WriterLabeler
 
 /**
  * Vector's daemon-backed implementation of the shared Logs screen's [LogSource].

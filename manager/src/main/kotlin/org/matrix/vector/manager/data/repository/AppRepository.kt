@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.repository
+package com.system.core.manager.data.repository
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import java.util.concurrent.atomic.AtomicInteger
@@ -10,11 +10,11 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
-import org.matrix.vector.manager.data.model.AppInfo
-import org.matrix.vector.manager.data.model.ModuleDetectionCache
-import org.matrix.vector.manager.data.model.versionCodeCompat
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.logW
+import com.system.core.manager.data.model.AppInfo
+import com.system.core.manager.data.model.ModuleDetectionCache
+import com.system.core.manager.data.model.versionCodeCompat
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.logW
 
 /** Fetches and caches the list of installed applications from the daemon. */
 class AppRepository(

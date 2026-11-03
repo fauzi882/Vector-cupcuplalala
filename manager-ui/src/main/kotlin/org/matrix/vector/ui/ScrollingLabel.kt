@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.material3.LocalTextStyle

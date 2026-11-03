@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -9,9 +9,9 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.rememberBottomSheetState
-import org.matrix.vector.ui.ChoiceRow
-import org.matrix.vector.ui.ScrollingLabel
-import org.matrix.vector.ui.SheetHeading
+import com.system.core.ui.ChoiceRow
+import com.system.core.ui.ScrollingLabel
+import com.system.core.ui.SheetHeading
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -64,10 +64,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import org.matrix.vector.ui.PanelHeader
-import org.matrix.vector.ui.SearchField
-import org.matrix.vector.ui.R
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.ui.PanelHeader
+import com.system.core.ui.SearchField
+import com.system.core.ui.R
+import com.system.core.ui.theme.Mono
 import java.util.Locale
 
 /** The reader's current locale, for formatting dates that are stored as machine timestamps. */

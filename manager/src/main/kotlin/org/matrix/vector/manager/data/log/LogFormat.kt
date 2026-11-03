@@ -1,7 +1,7 @@
-package org.matrix.vector.manager.data.log
+package com.system.core.manager.data.log
 
-import org.matrix.vector.ui.logs.LogLevel
-import org.matrix.vector.ui.logs.LogRow
+import com.system.core.ui.logs.LogLevel
+import com.system.core.ui.logs.LogRow
 
 /**
  * The daemon's own log framing, and the scanner that recovers it.

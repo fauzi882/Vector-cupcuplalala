@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.data
+package com.system.core.daemon.data
 
 import android.content.res.AssetManager
 import android.content.res.Resources
@@ -33,9 +33,9 @@ import java.util.zip.ZipFile
 import java.util.zip.ZipOutputStream
 import kotlin.io.path.exists
 import kotlin.io.path.isDirectory
-import org.matrix.vector.ipc.ModuleCode
-import org.matrix.vector.daemon.BuildConfig
-import org.matrix.vector.daemon.utils.ObfuscationManager
+import com.system.core.ipc.ModuleCode
+import com.system.core.daemon.BuildConfig
+import com.system.core.daemon.utils.ObfuscationManager
 
 private const val TAG = "VectorFileSystem"
 

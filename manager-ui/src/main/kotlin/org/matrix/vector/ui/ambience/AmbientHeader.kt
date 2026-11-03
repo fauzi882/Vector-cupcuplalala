@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.ambience
+package com.system.core.ui.ambience
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

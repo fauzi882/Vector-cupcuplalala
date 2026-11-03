@@ -5,7 +5,7 @@ android {
 
     buildTypes { release { isMinifyEnabled = false } }
 
-    namespace = "org.matrix.vector.managerservice"
+    namespace = "com.system.core.managerservice"
 }
 
 dependencies { api(libs.rikkax.parcelablelist) }

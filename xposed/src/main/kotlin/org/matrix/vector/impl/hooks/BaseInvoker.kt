@@ -1,4 +1,4 @@
-package org.matrix.vector.impl.hooks
+package com.system.core.impl.hooks
 
 import io.github.libxposed.api.XposedInterface.CtorInvoker
 import io.github.libxposed.api.XposedInterface.Invoker
@@ -7,9 +7,9 @@ import java.lang.reflect.Executable
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
-import org.matrix.vector.impl.di.VectorBootstrap
-import org.matrix.vector.nativebridge.HookBridge
-import org.matrix.vector.util.Utils
+import com.system.core.impl.di.SystemCoreBootstrap
+import com.system.core.nativebridge.HookBridge
+import com.system.core.util.Utils
 
 /**
  * Base implementation of the Invoker system. Handles the resolution of [Invoker.Type] to determine
@@ -104,7 +104,7 @@ internal abstract class BaseInvoker<T : Invoker<T, U>, U : Executable>(
                 }
 
                 val terminal: (Any?, Array<Any?>) -> Any? = { tObj, tArgs ->
-                    val delegate = VectorBootstrap.delegate
+                    val delegate = SystemCoreBootstrap.delegate
                     if (legacyHooks.isNotEmpty() && delegate != null) {
                         delegate.processLegacyHook(executable, tObj, tArgs, legacyHooks) {
                             runOriginal(tObj, tArgs)

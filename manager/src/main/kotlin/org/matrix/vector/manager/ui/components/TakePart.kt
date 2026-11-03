@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.components
+package com.system.core.manager.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,8 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.matrix.vector.manager.R
-import org.matrix.vector.manager.data.github.GitHubRepository
+import com.system.core.manager.R
+import com.system.core.manager.data.github.GitHubRepository
 
 /**
  * Where the page turns a reader into a participant.

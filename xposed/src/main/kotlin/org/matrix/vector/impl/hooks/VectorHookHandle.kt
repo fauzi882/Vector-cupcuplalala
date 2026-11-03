@@ -1,11 +1,11 @@
-package org.matrix.vector.impl.hooks
+package com.system.core.impl.hooks
 
 import io.github.libxposed.api.XposedInterface.HookHandle
 import io.github.libxposed.api.XposedInterface.Hooker
 import io.github.libxposed.api.error.HookFailedError
 import java.lang.reflect.Executable
 import java.util.concurrent.ConcurrentHashMap
-import org.matrix.vector.nativebridge.HookBridge
+import com.system.core.nativebridge.HookBridge
 
 /**
  * What the process remembers about the hooks a module has installed.

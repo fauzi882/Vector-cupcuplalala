@@ -1,6 +1,6 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
-import org.matrix.vector.ui.R
+import com.system.core.ui.R
 import android.text.format.Formatter
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

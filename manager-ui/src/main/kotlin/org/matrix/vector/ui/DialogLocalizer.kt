@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.runtime.Composable

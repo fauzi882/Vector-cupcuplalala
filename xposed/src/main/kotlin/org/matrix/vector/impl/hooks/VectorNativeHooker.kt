@@ -1,4 +1,4 @@
-package org.matrix.vector.impl.hooks
+package com.system.core.impl.hooks
 
 import io.github.libxposed.api.XposedInterface
 import io.github.libxposed.api.XposedInterface.ExceptionMode
@@ -11,9 +11,9 @@ import java.lang.reflect.Executable
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
-import org.matrix.vector.util.Utils
-import org.matrix.vector.impl.di.VectorBootstrap
-import org.matrix.vector.nativebridge.HookBridge
+import com.system.core.util.Utils
+import com.system.core.impl.di.SystemCoreBootstrap
+import com.system.core.nativebridge.HookBridge
 
 /**
  * Builder for configuring and registering hooks. [moduleId] scopes hook ids per module and is null
@@ -176,7 +176,7 @@ class VectorNativeHooker<T : Executable>(private val method: T) {
         }
 
         val terminal: (Any?, Array<Any?>) -> Any? = { tObj, tArgs ->
-            val delegate = VectorBootstrap.delegate
+            val delegate = SystemCoreBootstrap.delegate
             if (legacyHooks.isNotEmpty() && delegate != null) {
                 delegate.processLegacyHook(method, tObj, tArgs, legacyHooks) {
                     invokeOriginalSafely(tObj, tArgs)

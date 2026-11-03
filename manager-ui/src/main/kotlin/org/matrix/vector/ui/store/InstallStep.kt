@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 /**
  * Where a store-driven module install has got to. A plain state type with no Android dependencies, so

@@ -1,6 +1,6 @@
-package org.matrix.vector.manager.ui.theme
+package com.system.core.manager.ui.theme
 
-import org.matrix.vector.ui.locale.Translator
+import com.system.core.ui.locale.Translator
 
 /**
  * Who to thank for each language.

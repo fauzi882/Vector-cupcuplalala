@@ -1,10 +1,10 @@
-package org.matrix.vector.manager.ui.theme
+package com.system.core.manager.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
-import org.matrix.vector.ui.theme.SeedScheme
-import org.matrix.vector.ui.theme.ThemeMode
-import org.matrix.vector.ui.theme.toAmoled
+import com.system.core.ui.theme.SeedScheme
+import com.system.core.ui.theme.ThemeMode
+import com.system.core.ui.theme.toAmoled
 import androidx.compose.material3.MaterialExpressiveTheme
 import androidx.compose.material3.MotionScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -14,7 +14,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
-import org.matrix.vector.manager.di.ServiceLocator
+import com.system.core.manager.di.ServiceLocator
 
 @Composable
 fun VectorTheme(content: @Composable () -> Unit) {

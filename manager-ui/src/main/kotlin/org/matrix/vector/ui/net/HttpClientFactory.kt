@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.net
+package com.system.core.ui.net
 
 import android.content.Context
 import java.io.File

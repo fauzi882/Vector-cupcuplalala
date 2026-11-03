@@ -1,9 +1,9 @@
-package org.matrix.vector.manager.ui.components
+package com.system.core.manager.ui.components
 
-import org.matrix.vector.ui.AppIcon
-import org.matrix.vector.ui.SnackbarTone
-import org.matrix.vector.ui.SharedAlertDialog
-import org.matrix.vector.ui.R as UiR
+import com.system.core.ui.AppIcon
+import com.system.core.ui.SnackbarTone
+import com.system.core.ui.SharedAlertDialog
+import com.system.core.ui.R as UiR
 import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
@@ -44,10 +44,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
-import org.matrix.vector.manager.ui.theme.LocalizedOverlay
-import org.matrix.vector.manager.R
+import com.system.core.manager.logE
+import com.system.core.manager.logW
+import com.system.core.manager.ui.theme.LocalizedOverlay
+import com.system.core.manager.R
 import android.text.format.Formatter
 import androidx.compose.material.icons.rounded.ArrowCircleUp
 import androidx.compose.material.icons.rounded.CloudDownload
@@ -58,18 +58,18 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import org.matrix.vector.ui.ActionDrawerItem
-import org.matrix.vector.ui.store.ConfirmInstall
-import org.matrix.vector.ui.store.ReleaseAsset
-import org.matrix.vector.manager.data.repository.ModuleUpdateQueue
-import org.matrix.vector.ui.store.StoreChannel
-import org.matrix.vector.ui.store.releasesOn
+import com.system.core.ui.ActionDrawerItem
+import com.system.core.ui.store.ConfirmInstall
+import com.system.core.ui.store.ReleaseAsset
+import com.system.core.manager.data.repository.ModuleUpdateQueue
+import com.system.core.ui.store.StoreChannel
+import com.system.core.ui.store.releasesOn
 import androidx.compose.material.icons.rounded.RestartAlt
 import androidx.compose.material3.TextButton
-import org.matrix.vector.manager.ui.screens.modules.ScopeViewModel
-import org.matrix.vector.manager.ui.screens.modules.ScopeViewModel.Companion.SYSTEM_FRAMEWORK_PACKAGE
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.theme.Mono
+import com.system.core.manager.ui.screens.modules.ScopeViewModel
+import com.system.core.manager.ui.screens.modules.ScopeViewModel.Companion.SYSTEM_FRAMEWORK_PACKAGE
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.theme.Mono
 
 /** What a long press did, and how it went. */
 data class PackageActionResult(

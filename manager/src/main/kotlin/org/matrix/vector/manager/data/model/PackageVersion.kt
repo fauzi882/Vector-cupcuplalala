@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.data.model
+package com.system.core.manager.data.model
 
 import android.content.pm.PackageInfo
 import android.os.Build

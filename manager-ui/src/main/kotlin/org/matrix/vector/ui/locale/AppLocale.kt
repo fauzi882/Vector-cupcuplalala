@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.locale
+package com.system.core.ui.locale
 
 import android.content.Context
 import android.content.ContextWrapper

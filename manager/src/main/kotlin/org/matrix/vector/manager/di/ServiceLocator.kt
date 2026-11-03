@@ -1,10 +1,10 @@
-package org.matrix.vector.manager.di
+package com.system.core.manager.di
 
-import org.matrix.vector.manager.data.model.ModuleDetectionCache
+import com.system.core.manager.data.model.ModuleDetectionCache
 import java.io.File
-import org.matrix.vector.ui.store.latestOn
-import org.matrix.vector.ui.store.StoreChannel
-import org.matrix.vector.ui.store.StoreEntry
+import com.system.core.ui.store.latestOn
+import com.system.core.ui.store.StoreChannel
+import com.system.core.ui.store.StoreEntry
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.combine
@@ -25,24 +25,24 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.manager.data.log.CrashRecorder
-import org.matrix.vector.manager.data.github.GitHubRepository
-import org.matrix.vector.manager.data.repository.AppRepository
-import org.matrix.vector.manager.data.repository.BackupRepository
-import org.matrix.vector.manager.data.repository.FrameworkInstaller
-import org.matrix.vector.manager.data.repository.FrameworkUpdateRepository
-import org.matrix.vector.manager.data.repository.ManagerInstaller
-import org.matrix.vector.manager.data.repository.ModuleInstaller
-import org.matrix.vector.manager.data.repository.ModuleUpdateQueue
-import org.matrix.vector.manager.data.repository.ModuleRepository
-import org.matrix.vector.manager.data.repository.RepoRepository
-import org.matrix.vector.manager.data.repository.SettingsRepository
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.ipc.daemonPackageEventsFlow
-import org.matrix.vector.manager.ipc.packageEventsFlow
-import org.matrix.vector.ui.net.HttpClientFactory
-import org.matrix.vector.ui.net.VectorDns
+import com.system.core.ipc.IManagerService
+import com.system.core.manager.data.log.CrashRecorder
+import com.system.core.manager.data.github.GitHubRepository
+import com.system.core.manager.data.repository.AppRepository
+import com.system.core.manager.data.repository.BackupRepository
+import com.system.core.manager.data.repository.FrameworkInstaller
+import com.system.core.manager.data.repository.FrameworkUpdateRepository
+import com.system.core.manager.data.repository.ManagerInstaller
+import com.system.core.manager.data.repository.ModuleInstaller
+import com.system.core.manager.data.repository.ModuleUpdateQueue
+import com.system.core.manager.data.repository.ModuleRepository
+import com.system.core.manager.data.repository.RepoRepository
+import com.system.core.manager.data.repository.SettingsRepository
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.ipc.daemonPackageEventsFlow
+import com.system.core.manager.ipc.packageEventsFlow
+import com.system.core.ui.net.HttpClientFactory
+import com.system.core.ui.net.VectorDns
 
 /**
  * Hand-rolled service location, deliberately not a DI framework.

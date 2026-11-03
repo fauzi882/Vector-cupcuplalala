@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.canary
+package com.system.core.manager.ui.screens.canary
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,14 +10,14 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import org.matrix.vector.manager.BuildConfig
-import org.matrix.vector.manager.data.github.ClosedIssue
-import org.matrix.vector.manager.data.github.CommunityFeed
-import org.matrix.vector.manager.data.github.GitHubRepository
-import org.matrix.vector.manager.data.repository.CanaryBoard
-import org.matrix.vector.manager.data.repository.CanaryLayout
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.logW
+import com.system.core.manager.BuildConfig
+import com.system.core.manager.data.github.ClosedIssue
+import com.system.core.manager.data.github.CommunityFeed
+import com.system.core.manager.data.github.GitHubRepository
+import com.system.core.manager.data.repository.CanaryBoard
+import com.system.core.manager.data.repository.CanaryLayout
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.logW
 
 /**
  * The canary list, joined to the history it comes from.

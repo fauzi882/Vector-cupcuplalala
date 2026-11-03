@@ -1,6 +1,6 @@
-package org.matrix.vector.manager.demo
+package com.system.core.manager.demo
 
-import org.matrix.vector.ipc.IManagerService
+import com.system.core.ipc.IManagerService
 
 /**
  * A device state the manager cannot otherwise be shown.

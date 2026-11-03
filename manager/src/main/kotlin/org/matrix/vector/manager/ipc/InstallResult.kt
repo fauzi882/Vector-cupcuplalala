@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ipc
+package com.system.core.manager.ipc
 
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
@@ -10,8 +10,8 @@ import android.os.Build
 import androidx.core.content.IntentCompat
 import java.util.UUID
 import kotlinx.coroutines.suspendCancellableCoroutine
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logW
+import com.system.core.manager.logE
+import com.system.core.manager.logW
 
 /**
  * Asks for an install that replaces whatever copy of the package is already on the device.
@@ -122,7 +122,7 @@ suspend fun Context.commitForResult(
 }
 
 /** Only ever a prefix; the session id and a UUID follow. */
-private const val RESULT_ACTION = "org.matrix.vector.manager.INSTALL_RESULT"
+private const val RESULT_ACTION = "com.system.core.manager.INSTALL_RESULT"
 
 /** `PackageManager.INSTALL_REPLACE_EXISTING`, `@hide` like the field it belongs in. */
 private const val INSTALL_REPLACE_EXISTING = 0x00000002

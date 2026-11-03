@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 import android.annotation.SuppressLint
 import android.content.Context

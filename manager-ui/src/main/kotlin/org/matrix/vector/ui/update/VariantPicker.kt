@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.update
+package com.system.core.ui.update
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.Column
@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import org.matrix.vector.ui.R
+import com.system.core.ui.R
 
 /**
  * One build a release published: which variant it is, how big it is, and the name to fall back on

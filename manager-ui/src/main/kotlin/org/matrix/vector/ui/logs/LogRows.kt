@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.logs
+package com.system.core.ui.logs
 
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.Orientation
@@ -41,8 +41,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import kotlin.math.roundToInt
-import org.matrix.vector.ui.R
-import org.matrix.vector.ui.theme.LogLine
+import com.system.core.ui.R
+import com.system.core.ui.theme.LogLine
 
 /**
  * Horizontal panning shared by every row of a log.

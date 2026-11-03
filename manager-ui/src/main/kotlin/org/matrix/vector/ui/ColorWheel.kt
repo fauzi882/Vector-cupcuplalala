@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import android.graphics.Bitmap
 import androidx.compose.foundation.Canvas
@@ -31,7 +31,7 @@ import kotlin.math.hypot
 import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import org.matrix.vector.ui.theme.SeedScheme
+import com.system.core.ui.theme.SeedScheme
 
 /** The chroma the rim of the wheel represents. Past this, almost nothing is in gamut anyway. */
 private const val MAX_CHROMA = 110f

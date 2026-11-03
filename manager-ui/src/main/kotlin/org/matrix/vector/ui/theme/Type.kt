@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.theme
+package com.system.core.ui.theme
 
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDirection

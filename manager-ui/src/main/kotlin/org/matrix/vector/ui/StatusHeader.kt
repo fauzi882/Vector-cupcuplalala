@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
@@ -56,9 +56,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.lerp
 import kotlin.random.Random
 import kotlinx.coroutines.delay
-import org.matrix.vector.ui.ambience.AmbienceKind
-import org.matrix.vector.ui.ambience.AmbienceSettings
-import org.matrix.vector.ui.ambience.AmbientSurface
+import com.system.core.ui.ambience.AmbienceKind
+import com.system.core.ui.ambience.AmbienceSettings
+import com.system.core.ui.ambience.AmbientSurface
 
 /**
  * The four looks the status header can wear, decoupled from any one app's domain.

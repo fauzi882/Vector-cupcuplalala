@@ -1,14 +1,14 @@
-package org.matrix.vector
+package com.system.core
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Build
 import java.lang.reflect.Field
-import org.matrix.vector.util.Utils
-import org.matrix.vector.impl.hookers.HandleSystemServerProcessHooker
-import org.matrix.vector.impl.hooks.VectorHookBuilder
-import org.matrix.vector.service.BridgeService
+import com.system.core.util.Utils
+import com.system.core.impl.hookers.HandleSystemServerProcessHooker
+import com.system.core.impl.hooks.VectorHookBuilder
+import com.system.core.service.BridgeService
 
 /**
  * Handles System-Server side logic for the Parasitic Manager.

@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.report
+package com.system.core.manager.ui.screens.report
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
@@ -47,15 +47,15 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.matrix.vector.manager.R
-import org.matrix.vector.ui.R as UiR
-import org.matrix.vector.manager.data.github.GitHubRepository
-import org.matrix.vector.manager.data.log.logArchiveName
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.logE
-import org.matrix.vector.ui.SnackbarTone
-import org.matrix.vector.ui.SharedSnackbarHost
-import org.matrix.vector.ui.show
+import com.system.core.manager.R
+import com.system.core.ui.R as UiR
+import com.system.core.manager.data.github.GitHubRepository
+import com.system.core.manager.data.log.logArchiveName
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.logE
+import com.system.core.ui.SnackbarTone
+import com.system.core.ui.SharedSnackbarHost
+import com.system.core.ui.show
 
 /**
  * What to try, and what to bring, before opening an issue.

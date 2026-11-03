@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.store
+package com.system.core.ui.store
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

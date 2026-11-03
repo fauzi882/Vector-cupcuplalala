@@ -1,8 +1,8 @@
-package org.matrix.vector.daemon.data
+package com.system.core.daemon.data
 
 import java.nio.file.Path
-import org.matrix.vector.ipc.LoadedModule
-import org.matrix.vector.daemon.BuildConfig
+import com.system.core.ipc.LoadedModule
+import com.system.core.daemon.BuildConfig
 
 data class ProcessScope(val processName: String, val uid: Int)
 

@@ -1,19 +1,19 @@
-package org.matrix.vector.impl.core
+package com.system.core.impl.core
 
 import android.os.IBinder
 import android.os.ParcelFileDescriptor
-import org.matrix.vector.ipc.LoadedModule
-import org.matrix.vector.ipc.IProcessChannel
-import org.matrix.vector.ipc.IFrameworkService
-import org.matrix.vector.util.Log
+import com.system.core.ipc.LoadedModule
+import com.system.core.ipc.IProcessChannel
+import com.system.core.ipc.IFrameworkService
+import com.system.core.util.Log
 
 /**
  * Singleton client for managing IPC communication with the injected manager service. Handles Binder
  * death gracefully and ensures safe remote execution.
  */
-object VectorServiceClient : IFrameworkService, IBinder.DeathRecipient {
+object SystemCoreServiceClient : IFrameworkService, IBinder.DeathRecipient {
 
-    private const val TAG = "VectorServiceClient"
+    private const val TAG = "SystemCoreServiceClient"
 
     private var service: IFrameworkService? = null
     var processName: String = ""

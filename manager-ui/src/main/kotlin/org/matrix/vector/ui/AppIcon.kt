@@ -1,4 +1,4 @@
-package org.matrix.vector.ui
+package com.system.core.ui
 
 import android.content.pm.ApplicationInfo
 import android.graphics.Bitmap

@@ -1,9 +1,9 @@
-package org.matrix.vector.manager.ui.navigation
+package com.system.core.manager.ui.navigation
 
 import kotlinx.coroutines.flow.StateFlow
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.ui.navigation.FloatingNavSettings
-import org.matrix.vector.ui.navigation.NavPanelStore
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.ui.navigation.FloatingNavSettings
+import com.system.core.ui.navigation.NavPanelStore
 
 /**
  * Vector's side of the shared navigation container's two ports.

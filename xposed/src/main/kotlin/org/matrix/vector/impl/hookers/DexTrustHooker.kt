@@ -1,8 +1,8 @@
-package org.matrix.vector.impl.hookers
+package com.system.core.impl.hookers
 
 import android.os.Build
 import io.github.libxposed.api.XposedInterface
-import org.matrix.vector.nativebridge.HookBridge
+import com.system.core.nativebridge.HookBridge
 
 /**
  * Intercepts DEX file parsing to dynamically mark our framework's ClassLoader as trusted. Prevents

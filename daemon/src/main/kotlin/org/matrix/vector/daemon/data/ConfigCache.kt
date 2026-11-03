@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.data
+package com.system.core.daemon.data
 
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageParser
@@ -12,17 +12,17 @@ import java.nio.file.attribute.PosixFilePermissions
 import java.util.UUID
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.ipc.LoadedModule
-import org.matrix.vector.daemon.BuildConfig
-import org.matrix.vector.daemon.VectorDaemon
-import org.matrix.vector.daemon.ipc.FrameworkService
-import org.matrix.vector.daemon.ipc.InjectedModuleService
-import org.matrix.vector.daemon.ipc.ModuleAppService
-import org.matrix.vector.daemon.system.*
-import org.matrix.vector.daemon.utils.InstallerVerifier
-import org.matrix.vector.daemon.utils.applySqliteHelperWorkaround
-import org.matrix.vector.daemon.utils.getRealUsers
+import com.system.core.ipc.IManagerService
+import com.system.core.ipc.LoadedModule
+import com.system.core.daemon.BuildConfig
+import com.system.core.daemon.SystemCoreDaemon
+import com.system.core.daemon.ipc.FrameworkService
+import com.system.core.daemon.ipc.InjectedModuleService
+import com.system.core.daemon.ipc.ModuleAppService
+import com.system.core.daemon.system.*
+import com.system.core.daemon.utils.InstallerVerifier
+import com.system.core.daemon.utils.applySqliteHelperWorkaround
+import com.system.core.daemon.utils.getRealUsers
 
 private const val TAG = "VectorConfigCache"
 
@@ -51,7 +51,7 @@ object ConfigCache {
   private val rebuildLock = Any()
 
   init {
-    VectorDaemon.scope.launch {
+    SystemCoreDaemon.scope.launch {
       for (request in cacheUpdateChannel) {
         // Guarded, because the loop *is* the mechanism. A throw escaping here ends the `for`, the
         // coroutine completes, and every later requestCacheUpdate() drops its request into a

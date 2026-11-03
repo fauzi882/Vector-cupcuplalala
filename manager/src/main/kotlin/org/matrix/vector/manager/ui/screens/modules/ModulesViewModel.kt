@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.modules
+package com.system.core.manager.ui.screens.modules
 
 import android.os.SystemClock
 import android.content.pm.PackageManager
@@ -16,22 +16,22 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.matrix.vector.ipc.DeviceUser
-import org.matrix.vector.ipc.ScopeEntry
-import org.matrix.vector.manager.data.model.InstalledModule
-import org.matrix.vector.ui.REACH_PREVIEW_LIMIT
-import org.matrix.vector.ui.module.MATCH_ANY_USER
-import org.matrix.vector.ui.module.PER_USER_RANGE
-import org.matrix.vector.manager.data.repository.ModuleRepository
-import org.matrix.vector.ui.store.StoreEntry
-import org.matrix.vector.manager.data.repository.ModuleUpdateQueue
-import org.matrix.vector.manager.data.model.XposedApi
-import org.matrix.vector.manager.data.model.versionCodeCompat
-import org.matrix.vector.manager.di.ServiceLocator
-import org.matrix.vector.manager.ipc.DaemonClient
-import org.matrix.vector.manager.logE
-import org.matrix.vector.manager.logI
-import org.matrix.vector.manager.logW
+import com.system.core.ipc.DeviceUser
+import com.system.core.ipc.ScopeEntry
+import com.system.core.manager.data.model.InstalledModule
+import com.system.core.ui.REACH_PREVIEW_LIMIT
+import com.system.core.ui.module.MATCH_ANY_USER
+import com.system.core.ui.module.PER_USER_RANGE
+import com.system.core.manager.data.repository.ModuleRepository
+import com.system.core.ui.store.StoreEntry
+import com.system.core.manager.data.repository.ModuleUpdateQueue
+import com.system.core.manager.data.model.XposedApi
+import com.system.core.manager.data.model.versionCodeCompat
+import com.system.core.manager.di.ServiceLocator
+import com.system.core.manager.ipc.DaemonClient
+import com.system.core.manager.logE
+import com.system.core.manager.logI
+import com.system.core.manager.logW
 
 /** One tab: a user, and the modules installed for them. */
 data class UserModulesState(val user: DeviceUser, val modules: List<InstalledModule>)
@@ -271,7 +271,7 @@ class ModulesViewModel(
 
     fun restoreFrom(
         uri: android.net.Uri,
-        onResult: (org.matrix.vector.manager.data.repository.BackupRepository.RestoreOutcome?) -> Unit,
+        onResult: (com.system.core.manager.data.repository.BackupRepository.RestoreOutcome?) -> Unit,
     ) {
         viewModelScope.launch {
             val outcome = ServiceLocator.backup.restoreFrom(uri).getOrNull()

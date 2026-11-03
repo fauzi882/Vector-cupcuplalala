@@ -1,11 +1,11 @@
-package org.matrix.vector.daemon.data
+package com.system.core.daemon.data
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import java.io.File
-import org.matrix.vector.daemon.utils.FakeContext
+import com.system.core.daemon.utils.FakeContext
 
 private const val TAG = "VectorDatabase"
 private const val DB_VERSION = 4

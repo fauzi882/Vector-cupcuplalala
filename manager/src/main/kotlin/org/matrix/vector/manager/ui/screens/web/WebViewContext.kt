@@ -1,4 +1,4 @@
-package org.matrix.vector.manager.ui.screens.web
+package com.system.core.manager.ui.screens.web
 
 import android.content.Context
 import android.content.ContextWrapper

@@ -1,4 +1,4 @@
-package org.matrix.vector.ui.theme
+package com.system.core.ui.theme
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.Color

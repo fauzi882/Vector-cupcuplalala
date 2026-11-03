@@ -1,4 +1,4 @@
-package org.matrix.vector.daemon.ipc
+package com.system.core.daemon.ipc
 
 import android.content.ComponentName
 import android.content.Context
@@ -25,25 +25,25 @@ import io.github.libxposed.service.IXposedService
 import java.io.File
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
-import org.matrix.vector.ipc.DeviceUser
-import org.matrix.vector.ipc.IFrameworkInstallReceiver
-import org.matrix.vector.ipc.IManagerService
-import org.matrix.vector.ipc.ModuleLoadFailure
-import org.matrix.vector.ipc.ScopeEntry
-import org.matrix.vector.daemon.BuildConfig
-import org.matrix.vector.daemon.VectorDaemon
-import org.matrix.vector.daemon.data.ConfigCache
-import org.matrix.vector.daemon.data.FileSystem
-import org.matrix.vector.daemon.data.ModuleDatabase
-import org.matrix.vector.daemon.data.PreferenceStore
-import org.matrix.vector.daemon.env.Dex2OatServer
-import org.matrix.vector.daemon.env.LogcatMonitor
-import org.matrix.vector.daemon.system.*
-import org.matrix.vector.daemon.utils.InstallerVerifier
-import org.matrix.vector.daemon.utils.PackageOptimizer
-import org.matrix.vector.daemon.utils.RootImplementation
-import org.matrix.vector.daemon.utils.applyXspaceWorkaround
-import org.matrix.vector.daemon.utils.getRealUsers
+import com.system.core.ipc.DeviceUser
+import com.system.core.ipc.IFrameworkInstallReceiver
+import com.system.core.ipc.IManagerService
+import com.system.core.ipc.ModuleLoadFailure
+import com.system.core.ipc.ScopeEntry
+import com.system.core.daemon.BuildConfig
+import com.system.core.daemon.SystemCoreDaemon
+import com.system.core.daemon.data.ConfigCache
+import com.system.core.daemon.data.FileSystem
+import com.system.core.daemon.data.ModuleDatabase
+import com.system.core.daemon.data.PreferenceStore
+import com.system.core.daemon.env.Dex2OatServer
+import com.system.core.daemon.env.LogcatMonitor
+import com.system.core.daemon.system.*
+import com.system.core.daemon.utils.InstallerVerifier
+import com.system.core.daemon.utils.PackageOptimizer
+import com.system.core.daemon.utils.RootImplementation
+import com.system.core.daemon.utils.applyXspaceWorkaround
+import com.system.core.daemon.utils.getRealUsers
 import rikka.parcelablelist.ParcelableListSlice
 
 private const val TAG = "VectorManagerService"
@@ -314,7 +314,7 @@ object ManagerService : IManagerService.Stub() {
     activityManager?.forceStopPackage(packageName, userId)
   }
 
-  override fun softReboot() = VectorDaemon.softReboot()
+  override fun softReboot() = SystemCoreDaemon.softReboot()
 
   /**
    * The flashed manager APK, verified, for the manager to install as an ordinary app.
