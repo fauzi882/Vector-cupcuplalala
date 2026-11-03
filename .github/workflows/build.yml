@@ -45,7 +45,9 @@ jobs:
       - name: Upgrade Ninja
         run: |
           pip install ninja
-          ninja --version
+          NINJA_PATH=$(python3 -c "import ninja; print(ninja.BIN_DIR)")/ninja
+          sudo cp $NINJA_PATH /usr/local/lib/android/sdk/cmake/3.31.5/bin/ninja
+          /usr/local/lib/android/sdk/cmake/3.31.5/bin/ninja --version
 
       - name: Grant execute permission
         run: chmod +x gradlew
