@@ -1,7 +1,6 @@
 # Obfuscate semua class
 -repackageclasses 'a.b.c'
 -allowaccessmodification
--flattenpackagehierarchy 'x'
 
 # Keep entry points
 -keep class com.system.core.manager.ui.MainActivity {
@@ -28,7 +27,7 @@
 }
 
 # Keep serialization
--keepattributes *Annotation*
+-keepattributes *Annotation*,InnerClasses,EnclosingMethod
 -keepattributes Signature
 -keepattributes EnclosingMethod
 
