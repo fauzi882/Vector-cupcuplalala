@@ -1,10 +1,10 @@
-package org.matrix.vector;
+package com.system.core;
 
-import org.matrix.vector.ipc.IFrameworkService;
-import org.matrix.vector.util.Utils;
-import org.matrix.vector.impl.core.VectorStartup;
-import org.matrix.vector.impl.di.VectorBootstrap;
-import org.matrix.vector.legacy.LegacyDelegateImpl;
+import com.system.core.ipc.IFrameworkService;
+import com.system.core.util.Utils;
+import com.system.core.impl.core.VectorStartup;
+import com.system.core.impl.di.VectorBootstrap;
+import com.system.core.legacy.LegacyDelegateImpl;
 
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedInit;

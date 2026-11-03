@@ -1,14 +1,14 @@
-package org.matrix.vector.legacy;
+package com.system.core.legacy;
 
 import android.content.res.XResources;
 
-import org.matrix.vector.util.Utils;
-import org.matrix.vector.impl.core.VectorServiceClient;
-import org.matrix.vector.impl.di.LegacyFrameworkDelegate;
-import org.matrix.vector.impl.di.LegacyPackageInfo;
-import org.matrix.vector.impl.di.OriginalInvoker;
-import org.matrix.vector.impl.hooks.VectorLegacyCallback;
-import org.matrix.vector.impl.utils.VectorMetaDataReader;
+import com.system.core.util.Utils;
+import com.system.core.impl.core.VectorServiceClient;
+import com.system.core.impl.di.LegacyFrameworkDelegate;
+import com.system.core.impl.di.LegacyPackageInfo;
+import com.system.core.impl.di.OriginalInvoker;
+import com.system.core.impl.hooks.VectorLegacyCallback;
+import com.system.core.impl.utils.VectorMetaDataReader;
 
 import java.io.File;
 import java.io.IOException;

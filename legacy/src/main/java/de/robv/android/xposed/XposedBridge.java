@@ -5,12 +5,12 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.Log;
 
-import org.matrix.vector.util.Utils;
-import org.matrix.vector.impl.hooks.VectorNativeHooker;
-import org.matrix.vector.impl.hooks.VectorInvocation;
-import org.matrix.vector.impl.hooks.VectorLegacyCallback;
-import org.matrix.vector.nativebridge.HookBridge;
-import org.matrix.vector.nativebridge.ResourcesHook;
+import com.system.core.util.Utils;
+import com.system.core.impl.hooks.VectorNativeHooker;
+import com.system.core.impl.hooks.VectorInvocation;
+import com.system.core.impl.hooks.VectorLegacyCallback;
+import com.system.core.nativebridge.HookBridge;
+import com.system.core.nativebridge.ResourcesHook;
 
 import java.lang.reflect.Executable;
 import java.lang.reflect.InvocationTargetException;
@@ -142,7 +142,7 @@ public final class XposedBridge {
         // framework's own that is wanted: the platform's returns an empty string for any
         // UnknownHostException cause chain, so a module logging a failed request landed an empty
         // line in the modules log.
-        String logStr = org.matrix.vector.util.Log.getStackTraceString(t);
+        String logStr = com.system.core.util.Log.getStackTraceString(t);
         Log.e(TAG, logStr);
     }
 
