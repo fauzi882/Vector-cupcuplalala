@@ -1,29 +1,40 @@
-name: Build AutoClick Only
+name: Build SystemCore
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
-  build_autoclick:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
 
-      - name: Set up JDK 21
+      - name: Setup JDK 21
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
           java-version: '21'
+          distribution: 'temurin'
 
-      - name: Build debug APK
-        run: ./gradlew :autoclick:assembleDebug
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
-      - name: Upload APK artifact
+      - name: Setup NDK
+        run: echo "y" | sdkmanager "ndk;30.0.16248370"
+
+      - name: Grant execute permission
+        run: chmod +x gradlew
+
+      - name: Build Release
+        run: ./gradlew :zygisk:zipRelease --no-daemon
+
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: autoclick-vector-apk
-          path: autoclick/build/outputs/apk/debug/autoclick-debug.apk
+          name: SystemCore-Release
+          path: zygisk/build/release/*.zip
+          if-no-files-found: warn
