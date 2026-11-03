@@ -7,7 +7,5 @@ cd "$MODDIR" || exit 1
 # mount namespace with -m and takes no propagation flag. The namespace therefore marks its own
 # root slave before handing over, which is what keeps the daemon's dex2oat bind-mounts out of
 # the global one.
-unshare -m /system/bin/sh -c '
-    mount -o rslave none / || echo "vector: this mount namespace stays shared" >&2
-    exec "$0" "$@"
-' "$MODDIR/daemon" "$@" &
+# KernelSU compatible — skip unshare
+"$MODDIR/daemon" "$@" &
