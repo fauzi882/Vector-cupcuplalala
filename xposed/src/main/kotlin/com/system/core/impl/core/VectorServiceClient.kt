@@ -11,9 +11,9 @@ import com.system.core.util.Log
  * Singleton client for managing IPC communication with the injected manager service. Handles Binder
  * death gracefully and ensures safe remote execution.
  */
-object SystemCoreServiceClient : IFrameworkService, IBinder.DeathRecipient {
+object VectorServiceClient : IFrameworkService, IBinder.DeathRecipient {
 
-    private const val TAG = "SystemCoreServiceClient"
+    private const val TAG = "VectorServiceClient"
 
     private var service: IFrameworkService? = null
     var processName: String = ""

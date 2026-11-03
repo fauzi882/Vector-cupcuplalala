@@ -17,7 +17,7 @@ import java.util.concurrent.locks.ReentrantLock
 import com.system.core.ipc.HotReloadOutcome
 import com.system.core.ipc.LoadedModule
 import com.system.core.util.Log
-import com.system.core.impl.SystemCoreContext
+import com.system.core.impl.VectorContext
 import com.system.core.impl.VectorLifecycleManager
 import com.system.core.impl.hooks.VectorHookBuilder
 import com.system.core.impl.utils.VectorModuleClassLoader
@@ -35,7 +35,7 @@ object VectorModuleManager {
     // removes it. A reload holds a local strong list for the cycle instead.
     private class Generation(
         val classLoader: ClassLoader,
-        val context: SystemCoreContext,
+        val context: VectorContext,
         entries: List<XposedModule>,
         val isSystemServer: Boolean,
         val processName: String,
@@ -138,7 +138,7 @@ object VectorModuleManager {
 
             // Create the Context that will be injected into the module
             val vectorContext =
-                SystemCoreContext(
+                VectorContext(
                     packageName = module.packageName,
                     applicationInfo = module.applicationInfo,
                     service = module.service, // Our IPC client
@@ -238,7 +238,7 @@ object VectorModuleManager {
         val old =
             generations[packageName]
                 ?: return unsupported(
-                    "$packageName is not loaded in ${SystemCoreServiceClient.processName}"
+                    "$packageName is not loaded in ${VectorServiceClient.processName}"
                 )
         if (newModule.code.moduleClassNames.size != 1) {
             return unsupported("$packageName does not declare exactly one Java entry class")

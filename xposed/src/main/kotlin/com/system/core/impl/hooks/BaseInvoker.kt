@@ -7,7 +7,7 @@ import java.lang.reflect.Executable
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
-import com.system.core.impl.di.SystemCoreBootstrap
+import com.system.core.impl.di.VectorBootstrap
 import com.system.core.nativebridge.HookBridge
 import com.system.core.util.Utils
 
@@ -104,7 +104,7 @@ internal abstract class BaseInvoker<T : Invoker<T, U>, U : Executable>(
                 }
 
                 val terminal: (Any?, Array<Any?>) -> Any? = { tObj, tArgs ->
-                    val delegate = SystemCoreBootstrap.delegate
+                    val delegate = VectorBootstrap.delegate
                     if (legacyHooks.isNotEmpty() && delegate != null) {
                         delegate.processLegacyHook(executable, tObj, tArgs, legacyHooks) {
                             runOriginal(tObj, tArgs)

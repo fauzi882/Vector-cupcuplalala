@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import com.system.core.ipc.IManagerService
 import com.system.core.ipc.LoadedModule
 import com.system.core.daemon.BuildConfig
-import com.system.core.daemon.SystemCoreDaemon
+import com.system.core.daemon.VectorDaemon
 import com.system.core.daemon.ipc.FrameworkService
 import com.system.core.daemon.ipc.InjectedModuleService
 import com.system.core.daemon.ipc.ModuleAppService
@@ -51,7 +51,7 @@ object ConfigCache {
   private val rebuildLock = Any()
 
   init {
-    SystemCoreDaemon.scope.launch {
+    VectorDaemon.scope.launch {
       for (request in cacheUpdateChannel) {
         // Guarded, because the loop *is* the mechanism. A throw escaping here ends the `for`, the
         // coroutine completes, and every later requestCacheUpdate() drops its request into a

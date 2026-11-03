@@ -493,7 +493,7 @@ private fun rootManagerName(presence: ManagerPresence): String =
         else -> stringResource(R.string.launcher_root_generic)
     }
 
-/** Must match `SECRET_CODE` in the daemon's SystemCoreService, which is what actually answers it. */
+/** Must match `SECRET_CODE` in the daemon's VectorService, which is what actually answers it. */
 private const val SECRET_CODE = "*#*#832867#*#*"
 
 /**

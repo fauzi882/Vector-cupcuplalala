@@ -61,7 +61,7 @@ class InjectedModuleService(private val packageName: String) : IModuleService.St
 
   override fun openRemoteFile(path: String): ParcelFileDescriptor? {
     // XposedInterface#openRemoteFile documents FileNotFoundException for a missing *or* forbidden
-    // path. Returning null lets SystemCoreContext raise exactly that; throwing here surfaced a
+    // path. Returning null lets VectorContext raise exactly that; throwing here surfaced a
     // RemoteException for a missing file and an IllegalArgumentException for a rejected path.
     val userId = Binder.getCallingUid() / PER_USER_RANGE
     return runCatching {

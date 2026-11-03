@@ -50,13 +50,13 @@ interface LegacyFrameworkDelegate {
 }
 
 /** The central registry for framework bootstrapping. */
-object SystemCoreBootstrap {
+object VectorBootstrap {
     @Volatile
     var delegate: LegacyFrameworkDelegate? = null
         private set
 
     fun init(frameworkDelegate: LegacyFrameworkDelegate) {
-        check(delegate == null) { "SystemCoreBootstrap is already initialized!" }
+        check(delegate == null) { "VectorBootstrap is already initialized!" }
         delegate = frameworkDelegate
     }
 

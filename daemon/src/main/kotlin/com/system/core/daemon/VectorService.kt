@@ -16,7 +16,7 @@ import hidden.HiddenApiBridge
 import io.github.libxposed.service.IXposedScopeCallback
 import kotlinx.coroutines.launch
 import com.system.core.ipc.ScopeEntry
-import com.system.core.ipc.ISystemCoreDaemon
+import com.system.core.ipc.IVectorDaemon
 import com.system.core.ipc.IFrameworkService
 import com.system.core.daemon.data.ConfigCache
 import com.system.core.daemon.data.ModuleDatabase
@@ -27,9 +27,9 @@ import com.system.core.daemon.ipc.ManagerService
 import com.system.core.daemon.ipc.ModuleAppService
 import com.system.core.daemon.system.*
 
-private const val TAG = "SystemCoreService"
+private const val TAG = "VectorService"
 
-object SystemCoreService : ISystemCoreDaemon.Stub() {
+object VectorService : IVectorDaemon.Stub() {
 
   private var bootCompleted = false
 
@@ -59,7 +59,7 @@ object SystemCoreService : ISystemCoreDaemon.Stub() {
     // Initialize OS Observers using Coroutines for the dispatch blocks
     registerReceivers()
 
-    if (SystemCoreDaemon.startedAfterSystemServer) {
+    if (VectorDaemon.startedAfterSystemServer) {
       Log.i(TAG, "Started after system_server. Forcing boot completed event.")
       dispatchBootCompleted()
     }
@@ -102,7 +102,7 @@ object SystemCoreService : ISystemCoreDaemon.Stub() {
             sticky: Boolean,
             sendingUser: Int
         ) {
-          SystemCoreDaemon.scope.launch {
+          VectorDaemon.scope.launch {
             when (intent.action) {
               Intent.ACTION_LOCKED_BOOT_COMPLETED -> dispatchBootCompleted()
               Intent.ACTION_CONFIGURATION_CHANGED -> dispatchConfigurationChanged()

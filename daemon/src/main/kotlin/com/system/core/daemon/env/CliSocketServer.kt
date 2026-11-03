@@ -51,7 +51,7 @@ object CliSocketServer {
         while (!Thread.currentThread().isInterrupted) {
           try {
             val clientSocket = server.accept()
-            SystemCoreDaemon.scope.launch { handleClient(clientSocket) }
+            VectorDaemon.scope.launch { handleClient(clientSocket) }
           } catch (e: IOException) {
             if (Thread.currentThread().isInterrupted) break
             Log.w(TAG, "Error accepting client", e)

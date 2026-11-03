@@ -31,7 +31,7 @@ import com.system.core.ipc.IManagerService
 import com.system.core.ipc.ModuleLoadFailure
 import com.system.core.ipc.ScopeEntry
 import com.system.core.daemon.BuildConfig
-import com.system.core.daemon.SystemCoreDaemon
+import com.system.core.daemon.VectorDaemon
 import com.system.core.daemon.data.ConfigCache
 import com.system.core.daemon.data.FileSystem
 import com.system.core.daemon.data.ModuleDatabase
@@ -314,7 +314,7 @@ object ManagerService : IManagerService.Stub() {
     activityManager?.forceStopPackage(packageName, userId)
   }
 
-  override fun softReboot() = SystemCoreDaemon.softReboot()
+  override fun softReboot() = VectorDaemon.softReboot()
 
   /**
    * The flashed manager APK, verified, for the manager to install as an ordinary app.

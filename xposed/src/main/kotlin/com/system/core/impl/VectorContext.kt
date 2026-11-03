@@ -20,7 +20,7 @@ import com.system.core.impl.hooks.VectorHookBuilder
 import com.system.core.impl.hooks.VectorMethodInvoker
 import com.system.core.nativebridge.HookBridge
 
-private const val TAG = "SystemCoreContext"
+private const val TAG = "VectorContext"
 
 /** Smallest positive gap between the sorted addresses, i.e. one ArtMethod. */
 private fun strideOf(addresses: LongArray): Long {
@@ -56,7 +56,7 @@ private val artMethodField: Field? by lazy {
  * Main framework context implementation. Provides modules with capabilities to hook executables,
  * request invokers, and interact with the system.
  */
-class SystemCoreContext(
+class VectorContext(
     private val packageName: String,
     private val applicationInfo: ApplicationInfo,
     private val service: IModuleService,
@@ -188,7 +188,7 @@ class SystemCoreContext(
      * whose code the request was made from.
      */
     override fun log(priority: Int, tag: String?, msg: String, tr: Throwable?) {
-        val finalTag = tag ?: "SystemCoreContext"
+        val finalTag = tag ?: "VectorContext"
         val prefix = if (packageName.isNotEmpty()) "$packageName: " else ""
         val fullMsg = buildString {
             append(prefix).append(msg)

@@ -6,7 +6,7 @@ import android.os.IBinder
 import dalvik.system.DexFile
 import com.system.core.util.Utils
 import com.system.core.ipc.IFrameworkService
-import com.system.core.impl.di.SystemCoreBootstrap
+import com.system.core.impl.di.VectorBootstrap
 import com.system.core.impl.hookers.*
 import com.system.core.impl.hooks.VectorHookBuilder
 
@@ -23,7 +23,7 @@ object VectorStartup {
         appDir: String?,
         service: IFrameworkService?,
     ) {
-        SystemCoreServiceClient.init(service, processName ?: "android")
+        VectorServiceClient.init(service, processName ?: "android")
         VectorDeopter.deoptBootMethods()
     }
 
@@ -103,7 +103,7 @@ object VectorStartup {
                     // dispatchSystemServerLoaded below would notify an empty module set.
                     val activityThread = ActivityThread.currentActivityThread()
                     if (activityThread != null) {
-                        SystemCoreBootstrap.withLegacy { it.loadModules(activityThread) }
+                        VectorBootstrap.withLegacy { it.loadModules(activityThread) }
                     } else {
                         Utils.logW(
                             "Late system server injection: no current ActivityThread, modules cannot be loaded"

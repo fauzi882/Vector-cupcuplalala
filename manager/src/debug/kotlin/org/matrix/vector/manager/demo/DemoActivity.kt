@@ -30,7 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.system.core.ipc.IManagerService
 import com.system.core.manager.di.ServiceLocator
-import com.system.core.manager.ui.SystemCoreApp
+import com.system.core.manager.ui.VectorApp
 import com.system.core.manager.ui.theme.LocalizedContent
 import com.system.core.manager.ui.theme.VectorTheme
 
@@ -49,7 +49,7 @@ import com.system.core.manager.ui.theme.VectorTheme
  * intercepts the manager activity starting and hands the *real* binder to `Constants.setBinder`,
  * overwriting whatever was bound a moment earlier. Even "no daemon at all" came up reporting a
  * healthy framework — the failure mode a test harness can least afford, since it looks like a pass.
- * Rendering SystemCoreApp here means no manager activity is ever launched, so nothing re-binds behind
+ * Rendering VectorApp here means no manager activity is ever launched, so nothing re-binds behind
  * us.
  */
 class DemoActivity : ComponentActivity() {
@@ -102,7 +102,7 @@ class DemoActivity : ComponentActivity() {
                     ServiceLocator.bind(realService)
                     scenario = null
                 }
-                LocalizedContent { VectorTheme { SystemCoreApp() } }
+                LocalizedContent { VectorTheme { VectorApp() } }
             }
         }
     }

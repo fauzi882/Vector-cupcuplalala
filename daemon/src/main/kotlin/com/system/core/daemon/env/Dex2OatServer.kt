@@ -15,7 +15,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 import kotlinx.coroutines.launch
 import com.system.core.ipc.IManagerService
-import com.system.core.daemon.SystemCoreDaemon
+import com.system.core.daemon.VectorDaemon
 
 private const val TAG = "VectorDex2Oat"
 
@@ -223,7 +223,7 @@ object Dex2OatServer {
     onSelinuxEvent()
 
     // Run the socket accept loop in an IO coroutine
-    SystemCoreDaemon.scope.launch { runSocketLoop() }
+    VectorDaemon.scope.launch { runSocketLoop() }
   }
 
   private fun runSocketLoop() {

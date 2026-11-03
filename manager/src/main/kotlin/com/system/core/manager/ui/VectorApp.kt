@@ -75,7 +75,7 @@ import com.system.core.ui.store.RepoScreen
  * puts the container back for as long as it lasts.
  */
 @Composable
-fun SystemCoreApp() {
+fun VectorApp() {
     val navigator = rememberNavigator(VectorNavPanelStore, TOP_LEVEL_DESTINATIONS)
 
     // Where the launch intent asked to open. The activity has no back stack to act on, so it leaves

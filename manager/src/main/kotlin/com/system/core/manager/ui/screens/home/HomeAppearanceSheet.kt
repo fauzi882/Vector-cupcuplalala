@@ -105,7 +105,7 @@ import com.system.core.ui.R as UiR
 fun HomeAppearanceSheet(onDismiss: () -> Unit) {
     val settings = ServiceLocator.settings
     // Read out here rather than inside the sheet. A ModalBottomSheet is a subcomposition, so the
-    // locals SystemCoreApp provides do reach into it, but the navigator is wanted for one callback and
+    // locals VectorApp provides do reach into it, but the navigator is wanted for one callback and
     // nothing about it changes between here and there.
     val navigator = LocalNavigator.current
     val themeMode by settings.themeMode.collectAsStateWithLifecycle()

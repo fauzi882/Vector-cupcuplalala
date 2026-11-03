@@ -25,7 +25,7 @@ import java.lang.reflect.Method
 import java.util.concurrent.ConcurrentHashMap
 import com.system.core.ipc.IManagerService
 import com.system.core.util.Utils
-import com.system.core.impl.core.SystemCoreServiceClient
+import com.system.core.impl.core.VectorServiceClient
 
 /** The "Parasite" logic. Injects the manager APK into a host process (shell). */
 @SuppressLint("StaticFieldLeak")
@@ -481,8 +481,8 @@ object ParasiticManagerHooker {
         return try {
             // Asked first: a process the daemon did not launch the manager into gets null here,
             // and there is no point opening the APK for it.
-            val managerBinder = SystemCoreServiceClient.requestManagerService() ?: return false
-            SystemCoreServiceClient.openManagerApk()!!.use { pfd ->
+            val managerBinder = VectorServiceClient.requestManagerService() ?: return false
+            VectorServiceClient.openManagerApk()!!.use { pfd ->
                 val managerService = IManagerService.Stub.asInterface(managerBinder)
 
                 if (isParasitic) {

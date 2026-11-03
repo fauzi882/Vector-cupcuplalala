@@ -3,7 +3,7 @@ package com.system.core.impl.hookers
 import io.github.libxposed.api.XposedInterface
 import com.system.core.impl.VectorLifecycleManager
 import com.system.core.impl.core.VectorDeopter
-import com.system.core.impl.di.SystemCoreBootstrap
+import com.system.core.impl.di.VectorBootstrap
 import com.system.core.impl.hooks.VectorHookBuilder
 
 /**
@@ -72,6 +72,6 @@ object StartBootstrapServicesHooker : XposedInterface.Hooker {
         VectorLifecycleManager.dispatchSystemServerStarting(classLoader)
 
         // Dispatch to legacy framework modules
-        SystemCoreBootstrap.withLegacy { delegate -> delegate.onSystemServerLoaded(classLoader) }
+        VectorBootstrap.withLegacy { delegate -> delegate.onSystemServerLoaded(classLoader) }
     }
 }

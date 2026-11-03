@@ -12,7 +12,7 @@ android {
         }
     }
 
-    aidlPackagedList += "org/matrix/vector/ipc/LoadedModule.aidl"
+    aidlPackagedList += "com/system/core/ipc/LoadedModule.aidl"
     namespace = "com.system.core.daemonservice"
 }
 

@@ -10,7 +10,7 @@ import com.system.core.GrapheneDclHooker
 import com.system.core.ParasiticManagerHooker
 import com.system.core.ParasiticManagerSystemHooker
 import com.system.core.Startup
-import com.system.core.impl.core.SystemCoreServiceClient
+import com.system.core.impl.core.VectorServiceClient
 
 /** Main entry point for the Java-side loader, invoked via JNI from the Vector Zygisk module. */
 object Main {
@@ -46,7 +46,7 @@ object Main {
         Startup.initXposed(isSystem, niceName, appDir, appService)
 
         // Configure logging levels from the service client
-        runCatching { Log.muted = SystemCoreServiceClient.isLogMuted }
+        runCatching { Log.muted = VectorServiceClient.isLogMuted }
             .onFailure { t -> Utils.logE("Failed to configure logs from service", t) }
 
         // Check if this process is the designated Vector Manager.

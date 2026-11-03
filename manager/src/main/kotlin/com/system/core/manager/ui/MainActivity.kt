@@ -79,7 +79,7 @@ class MainActivity : ComponentActivity() {
                 CompositionLocalProvider(
                     LocalDialogLocalizer provides { content -> LocalizedOverlay(content) }
                 ) {
-                    VectorTheme { SplashGate { SystemCoreApp() } }
+                    VectorTheme { SplashGate { VectorApp() } }
                 }
             }
         }

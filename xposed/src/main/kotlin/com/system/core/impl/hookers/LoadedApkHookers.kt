@@ -9,7 +9,7 @@ import java.util.WeakHashMap
 import com.system.core.util.Utils
 import com.system.core.impl.VectorLifecycleManager
 import com.system.core.impl.di.LegacyPackageInfo
-import com.system.core.impl.di.SystemCoreBootstrap
+import com.system.core.impl.di.VectorBootstrap
 
 /** Safe reflection helper */
 private inline fun <reified T> Any.getFieldValue(name: String): T? {
@@ -94,7 +94,7 @@ object LoadedApkCtorHooker : XposedInterface.Hooker {
 
         val packageName = loadedApk.getFieldValue<String>("mPackageName") ?: return result
 
-        SystemCoreBootstrap.withLegacy { delegate ->
+        VectorBootstrap.withLegacy { delegate ->
             if (!delegate.isResourceHookingDisabled) {
                 val resDir = loadedApk.getFieldValue<String>("mResDir")
                 delegate.setPackageNameForResDir(packageName, resDir)
@@ -185,7 +185,7 @@ object LoadedApkCreateCLHooker : XposedInterface.Hooker {
             if (isInitialLoad) {
                 val mIncludeCode = loadedApk.getFieldValue<Boolean>("mIncludeCode") ?: true
                 if (ctx.isFirstPackage || mIncludeCode) {
-                    SystemCoreBootstrap.withLegacy { delegate ->
+                    VectorBootstrap.withLegacy { delegate ->
                         delegate.onPackageLoaded(
                             LegacyPackageInfo(
                                 ctx.legacyPackageName,

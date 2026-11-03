@@ -31,10 +31,10 @@ import com.system.core.daemon.ipc.ManagerService
 import com.system.core.daemon.ipc.SystemServerService
 import com.system.core.daemon.utils.applyNotificationWorkaround
 
-private const val TAG = "SystemCoreDaemon"
+private const val TAG = "VectorDaemon"
 private const val ACTION_SEND_BINDER = 1
 
-object SystemCoreDaemon {
+object VectorDaemon {
   private val exceptionHandler = CoroutineExceptionHandler { context, throwable ->
     Log.e(TAG, "Caught fatal coroutine exception in background task!", throwable)
   }
@@ -141,7 +141,7 @@ object SystemCoreDaemon {
     val isVerboseLog = ManagerService.isVerboseLogEnabled()
 
     // Setup IPC channel for applications by injecting DaemonService binder
-    sendToBridge(SystemCoreService.asBinder(), false)
+    sendToBridge(VectorService.asBinder(), false)
 
     if (!isVerboseLog) {
       LogcatMonitor.stopVerbose()
