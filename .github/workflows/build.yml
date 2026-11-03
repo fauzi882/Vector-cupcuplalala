@@ -42,6 +42,11 @@ jobs:
           fi
           ls $ANDROID_HOME/platforms/
 
+      - name: Upgrade Ninja
+        run: |
+          pip install ninja
+          ninja --version
+
       - name: Grant execute permission
         run: chmod +x gradlew
 
