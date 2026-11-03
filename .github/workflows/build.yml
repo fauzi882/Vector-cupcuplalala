@@ -22,24 +22,33 @@ jobs:
 
       - name: Setup Android SDK
         run: |
-          sudo apt-get install -y wget unzip
-          wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
-          mkdir -p $HOME/android/cmdline-tools
-          unzip -q commandlinetools-linux-11076708_latest.zip -d $HOME/android/cmdline-tools
-          mv $HOME/android/cmdline-tools/cmdline-tools $HOME/android/cmdline-tools/latest
-          export ANDROID_HOME=$HOME/android
-          export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
-          echo "ANDROID_HOME=$HOME/android" >> $GITHUB_ENV
-          echo "$HOME/android/cmdline-tools/latest/bin" >> $GITHUB_PATH
-          echo "$HOME/android/platform-tools" >> $GITHUB_PATH
+          export ANDROID_HOME=$ANDROID_SDK_ROOT
           yes | sdkmanager --licenses 2>/dev/null || true
-          sdkmanager "platforms;android-37" "build-tools;37.0.0" "ndk;30.0.16248370" "platform-tools"
+          # coba stable dulu, fallback ke preview channel
+          sdkmanager "platforms;android-35" \
+            "build-tools;35.0.0" \
+            "ndk;30.0.16248370" \
+            "platform-tools" || true
+          # install SDK 37 dari preview channel
+          sdkmanager --channel=3 "platforms;android-37" \
+            "build-tools;37.0.0" 2>/dev/null || \
+          sdkmanager --channel=1 "platforms;android-37" \
+            "build-tools;37.0.0" 2>/dev/null || true
+          # fallback: symlink 35 sebagai 37
+          ls $ANDROID_HOME/platforms/
+          if [ ! -d "$ANDROID_HOME/platforms/android-37" ]; then
+            ln -sf $ANDROID_HOME/platforms/android-35 \
+              $ANDROID_HOME/platforms/android-37 || true
+          fi
+          ls $ANDROID_HOME/platforms/
 
       - name: Grant execute permission
         run: chmod +x gradlew
 
       - name: Build Release
         run: ./gradlew :zygisk:zipRelease --no-daemon
+        env:
+          ANDROID_HOME: ${{ env.ANDROID_HOME }}
 
       - name: Upload zygisk release
         uses: actions/upload-artifact@v4
