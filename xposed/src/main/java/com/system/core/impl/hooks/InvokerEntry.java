@@ -1,4 +1,4 @@
-package org.matrix.vector.impl.hooks;
+package com.system.core.impl.hooks;
 
 import io.github.libxposed.api.XposedInterface.CtorInvoker;
 import io.github.libxposed.api.XposedInterface.Invoker;
