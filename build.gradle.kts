@@ -220,7 +220,7 @@ val versionNameProvider = providers.of(GitLatestTagValueSource::class.java) {}
 
 val injectedPackageName = "com.android.shell"
 val injectedPackageUid = 2000
-val defaultManagerPackageName = "org.matrix.vector.manager"
+val defaultManagerPackageName = "com.system.core.manager"
 
 val androidTargetSdkVersion = 37
 val androidMinSdkVersion = 27
