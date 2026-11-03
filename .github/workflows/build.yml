@@ -61,5 +61,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: SystemCore-Release
-          path: zygisk/build/release/*.zip
+          path: zygisk/release/*.zip
           if-no-files-found: warn
