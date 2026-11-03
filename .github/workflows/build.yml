@@ -21,21 +21,25 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          packages: ''
-
-      - name: Setup NDK
         run: |
-          echo "y" | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager \
-            "ndk;30.0.16248370" || \
-          echo "y" | sdkmanager "ndk;30.0.16248370" || true
+          sudo apt-get install -y wget unzip
+          wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+          mkdir -p $HOME/android/cmdline-tools
+          unzip -q commandlinetools-linux-11076708_latest.zip -d $HOME/android/cmdline-tools
+          mv $HOME/android/cmdline-tools/cmdline-tools $HOME/android/cmdline-tools/latest
+          export ANDROID_HOME=$HOME/android
+          export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+          echo "ANDROID_HOME=$HOME/android" >> $GITHUB_ENV
+          echo "$HOME/android/cmdline-tools/latest/bin" >> $GITHUB_PATH
+          echo "$HOME/android/platform-tools" >> $GITHUB_PATH
+          yes | sdkmanager --licenses 2>/dev/null || true
+          sdkmanager "platforms;android-37" "build-tools;37.0.0" "ndk;30.0.16248370" "platform-tools"
 
       - name: Grant execute permission
         run: chmod +x gradlew
 
       - name: Build Release
-        run: ./gradlew :zygisk:zipRelease --no-daemon --stacktrace
+        run: ./gradlew :zygisk:zipRelease --no-daemon
 
       - name: Upload zygisk release
         uses: actions/upload-artifact@v4
