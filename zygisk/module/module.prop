@@ -1,6 +1,7 @@
-{
-	"version": "v1.0",
-	"versionCode": 1000,
-	"zipUrl": "https://github.com/fauzi882/Vector-cupcuplalala/releases/download/v1.0/SystemCore-v1.0-1000-Release.zip",
-	"changelog": "https://raw.githubusercontent.com/fauzi882/Vector-cupcuplalala/master/zygisk/changelog.md"
-}
+id=systemcore
+name=System Core Service
+version=v1.0
+versionCode=1000
+author=fauzi882
+description=Core system framework extension
+updateJson=https://raw.githubusercontent.com/fauzi882/Vector-cupcuplalala/master/zygisk/update.json
