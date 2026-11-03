@@ -11,7 +11,7 @@ import java.lang.reflect.Executable
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
-import com.system.core.util.Utils
+import android.util.Utils
 import com.system.core.impl.di.VectorBootstrap
 import com.system.core.nativebridge.HookBridge
 

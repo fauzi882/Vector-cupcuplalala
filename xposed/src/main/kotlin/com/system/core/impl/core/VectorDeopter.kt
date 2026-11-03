@@ -1,8 +1,8 @@
 package com.system.core.impl.core
 
 import java.lang.reflect.Executable
-import com.system.core.util.Log
-import com.system.core.util.Utils
+import android.util.Log
+import android.util.Utils
 import com.system.core.nativebridge.HookBridge
 
 /**

@@ -6,7 +6,7 @@ import androidx.annotation.RequiresApi
 import io.github.libxposed.api.XposedModule
 import io.github.libxposed.api.XposedModuleInterface.*
 import java.util.concurrent.ConcurrentHashMap
-import com.system.core.util.Log
+import android.util.Log
 
 /** Manages the dispatching of modern lifecycle events to loaded modules. */
 object VectorLifecycleManager {

@@ -4,7 +4,7 @@ import android.app.ActivityThread
 import android.os.Build
 import android.os.IBinder
 import dalvik.system.DexFile
-import com.system.core.util.Utils
+import android.util.Utils
 import com.system.core.ipc.IFrameworkService
 import com.system.core.impl.di.VectorBootstrap
 import com.system.core.impl.hookers.*

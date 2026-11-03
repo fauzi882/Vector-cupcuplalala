@@ -14,7 +14,7 @@ import java.lang.reflect.Method
 import java.lang.reflect.Modifier
 import java.util.concurrent.ConcurrentHashMap
 import com.system.core.ipc.IModuleService
-import com.system.core.util.Log
+import android.util.Log
 import com.system.core.impl.hooks.VectorCtorInvoker
 import com.system.core.impl.hooks.VectorHookBuilder
 import com.system.core.impl.hooks.VectorMethodInvoker

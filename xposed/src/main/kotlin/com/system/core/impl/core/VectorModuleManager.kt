@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.locks.ReentrantLock
 import com.system.core.ipc.HotReloadOutcome
 import com.system.core.ipc.LoadedModule
-import com.system.core.util.Log
+import android.util.Log
 import com.system.core.impl.VectorContext
 import com.system.core.impl.VectorLifecycleManager
 import com.system.core.impl.hooks.VectorHookBuilder

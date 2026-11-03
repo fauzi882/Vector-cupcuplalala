@@ -9,7 +9,7 @@ import java.util.TreeMap
 import java.util.concurrent.ConcurrentHashMap
 import com.system.core.ipc.IModuleService
 import com.system.core.ipc.IRemotePreferenceCallback
-import com.system.core.util.Log
+import android.util.Log
 
 @Suppress("DEPRECATION", "UNCHECKED_CAST")
 private inline fun <reified T> Bundle.getSerializableCompat(key: String): T? {

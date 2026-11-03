@@ -9,7 +9,7 @@ import java.lang.reflect.Method
 import java.lang.reflect.Modifier
 import com.system.core.impl.di.VectorBootstrap
 import com.system.core.nativebridge.HookBridge
-import com.system.core.util.Utils
+import android.util.Utils
 
 /**
  * Base implementation of the Invoker system. Handles the resolution of [Invoker.Type] to determine

@@ -7,7 +7,7 @@ import java.util.concurrent.Executors
 import com.system.core.ipc.LoadedModule
 import com.system.core.ipc.IHotReloadOutcomeReceiver
 import com.system.core.ipc.IProcessChannel
-import com.system.core.util.Log
+import android.util.Log
 
 private const val TAG = "VectorProcessChannel"
 

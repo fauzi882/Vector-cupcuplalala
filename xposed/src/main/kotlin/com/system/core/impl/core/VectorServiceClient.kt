@@ -5,7 +5,7 @@ import android.os.ParcelFileDescriptor
 import com.system.core.ipc.LoadedModule
 import com.system.core.ipc.IProcessChannel
 import com.system.core.ipc.IFrameworkService
-import com.system.core.util.Log
+import android.util.Log
 
 /**
  * Singleton client for managing IPC communication with the injected manager service. Handles Binder
