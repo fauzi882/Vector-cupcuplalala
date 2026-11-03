@@ -1,7 +1,7 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
-import org.matrix.vector.ipc.LoadedModule;
-import org.matrix.vector.ipc.IProcessChannel;
+import com.system.core.ipc.LoadedModule;
+import com.system.core.ipc.IProcessChannel;
 
 /**
  * What an injected process asks the framework for, once the zygisk handshake has given it one.

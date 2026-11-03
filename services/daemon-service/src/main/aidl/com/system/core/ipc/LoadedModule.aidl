@@ -1,7 +1,7 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
-import org.matrix.vector.ipc.ModuleCode;
-import org.matrix.vector.ipc.IModuleService;
+import com.system.core.ipc.ModuleCode;
+import com.system.core.ipc.IModuleService;
 
 /**
  * A module as the daemon hands it to one injected process: who it is, the code to run, and the way

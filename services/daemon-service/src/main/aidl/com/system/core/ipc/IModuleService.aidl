@@ -1,6 +1,6 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
-import org.matrix.vector.ipc.IRemotePreferenceCallback;
+import com.system.core.ipc.IRemotePreferenceCallback;
 
 /**
  * A module's own service, as seen from inside a process the module was injected into.

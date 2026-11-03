@@ -1,6 +1,6 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
-import org.matrix.vector.ipc.IFrameworkService;
+import com.system.core.ipc.IFrameworkService;
 
 /**
  * The daemon's front door, reached from a newly specialized process through the zygisk bridge.

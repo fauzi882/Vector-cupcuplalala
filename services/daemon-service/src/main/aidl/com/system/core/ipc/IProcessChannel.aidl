@@ -1,7 +1,7 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
-import org.matrix.vector.ipc.LoadedModule;
-import org.matrix.vector.ipc.IHotReloadOutcomeReceiver;
+import com.system.core.ipc.LoadedModule;
+import com.system.core.ipc.IHotReloadOutcomeReceiver;
 
 /**
  * The one thing the daemon calls <i>into</i> an injected process for.

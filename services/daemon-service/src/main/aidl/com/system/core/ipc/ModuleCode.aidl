@@ -1,4 +1,4 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
 /**
  * One generation of a module's executable code, as the daemon read it out of the module APK.

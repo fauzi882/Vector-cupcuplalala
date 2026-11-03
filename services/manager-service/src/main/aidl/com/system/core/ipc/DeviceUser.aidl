@@ -1,4 +1,4 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
 /**
  * One Android user or profile on this device, reduced to what the manager displays.

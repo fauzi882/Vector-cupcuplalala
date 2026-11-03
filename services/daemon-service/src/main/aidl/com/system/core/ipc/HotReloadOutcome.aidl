@@ -1,4 +1,4 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
 /**
  * What an injected process reports back after attempting a hot reload.

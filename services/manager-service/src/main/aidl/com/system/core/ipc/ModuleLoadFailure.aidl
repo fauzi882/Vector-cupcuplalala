@@ -1,4 +1,4 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
 /**
  * A module the user switched on that the framework could not load, and why.

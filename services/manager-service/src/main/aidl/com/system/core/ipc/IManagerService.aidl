@@ -1,11 +1,11 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
 import rikka.parcelablelist.ParcelableListSlice;
 
-import org.matrix.vector.ipc.DeviceUser;
-import org.matrix.vector.ipc.IFrameworkInstallReceiver;
-import org.matrix.vector.ipc.ModuleLoadFailure;
-import org.matrix.vector.ipc.ScopeEntry;
+import com.system.core.ipc.DeviceUser;
+import com.system.core.ipc.IFrameworkInstallReceiver;
+import com.system.core.ipc.ModuleLoadFailure;
+import com.system.core.ipc.ScopeEntry;
 
 /**
  * What the manager app asks the daemon for, once the framework has pushed it a binder.

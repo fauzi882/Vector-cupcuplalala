@@ -1,6 +1,6 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
-import org.matrix.vector.ipc.HotReloadOutcome;
+import com.system.core.ipc.HotReloadOutcome;
 
 /**
  * How an injected process answers a hot reload request.

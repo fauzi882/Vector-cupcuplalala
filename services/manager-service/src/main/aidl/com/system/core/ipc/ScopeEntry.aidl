@@ -1,4 +1,4 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
 /**
  * One line of a module's scope: an app the module is to be loaded into, and whose copy of it.

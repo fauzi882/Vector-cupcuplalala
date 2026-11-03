@@ -1,4 +1,4 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
 /**
  * Where a framework flash reports to, one line at a time and then once at the end.

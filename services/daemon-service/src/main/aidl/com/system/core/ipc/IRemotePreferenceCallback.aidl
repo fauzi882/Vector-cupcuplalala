@@ -1,4 +1,4 @@
-package org.matrix.vector.ipc;
+package com.system.core.ipc;
 
 /**
  * How the daemon tells an injected process that a module's remote preferences changed.
