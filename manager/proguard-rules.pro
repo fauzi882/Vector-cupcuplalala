@@ -55,3 +55,10 @@
 -obfuscationdictionary proguard-dict.txt
 -classobfuscationdictionary proguard-dict.txt
 -packageobfuscationdictionary proguard-dict.txt
+
+-dontwarn androidx.window.**
+-dontwarn androidx.window.extensions.**
+-dontwarn androidx.window.sidecar.**
+-dontwarn androidx.window.area.**
+-dontwarn androidx.window.layout.**
+-dontwarn androidx.window.reflection.**
